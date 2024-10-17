@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Mzh4b9iEsvpWLgZczS/tm9s8C5szPHT9KhfIHSwfN74=",
+  "Source": "ITAM_DB",
+  "BasePath": "_content/ITAM_DB",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITAM_DB", "ITAM_DB\ITAM_DB.csproj", "{84CAE597-A02D-4C52-871C-BC15CBE073AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84CAE597-A02D-4C52-871C-BC15CBE073AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CAE597-A02D-4C52-871C-BC15CBE073AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CAE597-A02D-4C52-871C-BC15CBE073AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CAE597-A02D-4C52-871C-BC15CBE073AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD37AD88-A53B-4AD8-A4C8-B1375F04D0A4}
+	EndGlobalSection
+EndGlobal
