@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ITAM_API.Model.Operations
+﻿namespace ITAM_DB.Dto
 {
-    public class Itot_Pc
+    public class Itot_PcDto
     {
-        public int id { get; set; }
         public string asset_barcode { get; set; } = string.Empty;
         public string date_acquired { get; set; } = string.Empty;
         public string pc_type { get; set; } = string.Empty;
@@ -19,14 +16,6 @@ namespace ITAM_API.Model.Operations
         public string size { get; set; } = string.Empty;
         public string color { get; set; } = string.Empty;
         public string li_description { get; set; } = string.Empty;
-        public string serial_no { get; set; } = string.Empty;        
-        public DateTime date_created { get; set; }
-        public DateTime date_updated { get; set; }
-        public Itot_Pc()
-        {
-            var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
-            date_created = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-            date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-        }
+        public string serial_no { get; set; } = string.Empty;
     }
 }

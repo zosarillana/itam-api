@@ -1,4 +1,5 @@
 using ITAM_API.Data;
+using ITAM_API.Data.Itot;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,9 @@ builder.Services.AddControllers();
 
 // Register ItotContext with dependency injection
 builder.Services.AddDbContext<ItotContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContext<Itot_PcContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Enable Swagger documentation
