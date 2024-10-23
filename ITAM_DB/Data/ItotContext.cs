@@ -1,4 +1,5 @@
 ﻿using ITAM_API.Model.Operations;
+using ITAM_DB.Model.Cards;
 using Microsoft.EntityFrameworkCore;
 
 namespace ITAM_API.Data
@@ -12,6 +13,8 @@ namespace ITAM_API.Data
 
         // DbSet for Itot_Peripheral
         public DbSet<Itot_Peripheral> Itot_Peripherals { get; set; }
+        public DbSet<Pc_Card> Pc_Cards { get; set; }
+        public DbSet<User_Card> User_Cards { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +31,22 @@ namespace ITAM_API.Data
                 .HasKey(i => i.id);
 
             modelBuilder.Entity<Itot_Peripheral>()
+                .Property(i => i.id)
+                .ValueGeneratedOnAdd();
+
+            // Configuration for Pc_Card
+            modelBuilder.Entity<Pc_Card>()
+                .HasKey(i => i.id);
+           
+            modelBuilder.Entity<Pc_Card>()
+                .Property(i => i.id)
+                .ValueGeneratedOnAdd();
+
+            // Configuration for User_Card
+            modelBuilder.Entity<User_Card>()
+                .HasKey(i => i.id);
+
+            modelBuilder.Entity<User_Card>()
                 .Property(i => i.id)
                 .ValueGeneratedOnAdd();
         }

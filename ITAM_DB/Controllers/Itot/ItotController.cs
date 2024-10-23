@@ -19,11 +19,22 @@ namespace ITAM_DB.Controllers.Itot
         }
         // GET: /itot
         [HttpGet("pc")]
-        public async Task<ActionResult<IEnumerable<Itot_Pc>>> GetAll()
+        public async Task<ActionResult<IEnumerable<Itot_Pc>>> GetAllPcs()
         {
             var items = await _context.Itot_Pcs.ToListAsync(); // Use your DbSet for Itot_Pc
             return Ok(items); // Return 200 OK with the list of items
         }
+
+        // GET: /itot
+        //[HttpGet("pc/barcode")]
+        //public async Task<ActionResult<IEnumerable<string>>> GetAllPcsBarcode()
+        //{
+        //    var assetBarcodes = await _context.Itot_Pcs
+        //        .Select(pc => pc.asset_barcode) // Project only the asset_barcode property
+        //        .ToListAsync();
+
+        //    return Ok(assetBarcodes); // Return 200 OK with the list of asset_barcode
+        //}
 
         // GET: /itot/{id}
         [HttpGet("pc/{id}")]
@@ -46,6 +57,17 @@ namespace ITAM_DB.Controllers.Itot
             var items = await _context.Itot_Peripherals.ToListAsync(); // Use your DbSet for Itot_Pc
             return Ok(items); // Return 200 OK with the list of items
         }
+
+        // GET: /itot
+        //[HttpGet("peripherals/barcode")]
+        //public async Task<ActionResult<IEnumerable<string>>> GetAllPeripheralsBarcode()
+        //{
+        //    var assetBarcodes = await _context.Itot_Peripherals
+        //        .Select(p => p.asset_barcode) // Project only the asset_barcode property
+        //        .ToListAsync();
+
+        //    return Ok(assetBarcodes); // Return 200 OK with the list of asset_barcode
+        //}
 
         // GET: /itot/{id}
         [HttpGet("peripherals/{id}")]
