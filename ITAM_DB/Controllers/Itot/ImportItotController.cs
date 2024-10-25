@@ -55,7 +55,9 @@ namespace ITAM_DB.Controllers.Itot
                         size = row.size,
                         color = row.color,
                         li_description = row.li_description,
-                        serial_no = row.serial_no,                        
+                        serial_no = row.serial_no,
+                        assigned = "Not Assigned",
+                        status = "Active"
                     };
 
                     // Add the new entity to the context
@@ -99,9 +101,9 @@ namespace ITAM_DB.Controllers.Itot
                     // Create a new instance of Itot_Pc based on the DTO
                     var itot_peripherals = new Itot_Peripheral
                     {
-                      
+
                         date_acquired = row.date_acquired, // Ensure the format is correct                                               
-                        brand = row.brand,                      
+                        brand = row.brand,
                         model = row.model,
                         asset_barcode = row.asset_barcode,
                         peripheral_type = row.peripheral_type,
@@ -109,7 +111,9 @@ namespace ITAM_DB.Controllers.Itot
                         color = row.color,
                         li_description = row.li_description,
                         serial_no = row.serial_no,
-                        
+                        assigned = "Not Assigned",
+                        status = "Active"
+
                     };
 
                     // Add the new entity to the context

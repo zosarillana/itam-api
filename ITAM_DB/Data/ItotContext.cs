@@ -7,11 +7,7 @@ namespace ITAM_API.Data
     public class ItotContext : DbContext // Inheriting from DbContext
     {
         public ItotContext(DbContextOptions<ItotContext> options) : base(options) { }
-
-        // DbSet for Itot_Pc
         public DbSet<Itot_Pc> Itot_Pcs { get; set; }
-
-        // DbSet for Itot_Peripheral
         public DbSet<Itot_Peripheral> Itot_Peripherals { get; set; }
         public DbSet<Pc_Card> Pc_Cards { get; set; }
         public DbSet<User_Card> User_Cards { get; set; }
@@ -37,10 +33,14 @@ namespace ITAM_API.Data
             // Configuration for Pc_Card
             modelBuilder.Entity<Pc_Card>()
                 .HasKey(i => i.id);
-           
+
             modelBuilder.Entity<Pc_Card>()
-                .Property(i => i.id)
+               .Property(i => i.id)
                 .ValueGeneratedOnAdd();
+            // ** Removed Foreign Key Relationships for pc_id and peripheral_id **
+            // If you want to just store the IDs without any relationships, 
+            // you can leave them out entirely. The properties will still exist 
+            // in the entity, but won't enforce any foreign key constraints.
 
             // Configuration for User_Card
             modelBuilder.Entity<User_Card>()
@@ -49,6 +49,8 @@ namespace ITAM_API.Data
             modelBuilder.Entity<User_Card>()
                 .Property(i => i.id)
                 .ValueGeneratedOnAdd();
+
+            // ** Removed Foreign Key Relationships for pc_id and peripheral_id in User_Card **
         }
     }
 }

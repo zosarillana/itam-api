@@ -34,6 +34,10 @@ namespace ITAM_DB.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("assigned")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("brand")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -88,6 +92,10 @@ namespace ITAM_DB.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("storage_capacity")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -110,6 +118,10 @@ namespace ITAM_DB.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<string>("asset_barcode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("assigned")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -151,6 +163,10 @@ namespace ITAM_DB.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("id");
 
                     b.ToTable("Itot_Peripherals");
@@ -182,7 +198,7 @@ namespace ITAM_DB.Migrations
                     b.Property<DateTime>("date_updated")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("dept_no")
+                    b.Property<string>("dept_name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -202,11 +218,13 @@ namespace ITAM_DB.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("pc_id")
-                        .HasColumnType("int");
+                    b.Property<string>("pc_id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("peripheral_id")
-                        .HasColumnType("int");
+                    b.Property<string>("peripheral_id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
@@ -239,7 +257,7 @@ namespace ITAM_DB.Migrations
                     b.Property<DateTime>("date_updated")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("dept_no")
+                    b.Property<string>("dept_name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -259,11 +277,13 @@ namespace ITAM_DB.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("pc_id")
-                        .HasColumnType("int");
+                    b.Property<string>("pc_id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("peripheral_id")
-                        .HasColumnType("int");
+                    b.Property<string>("peripheral_id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
