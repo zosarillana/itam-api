@@ -57,7 +57,8 @@ namespace ITAM_DB.Controllers.Itot
                         li_description = row.li_description,
                         serial_no = row.serial_no,
                         assigned = "Not Assigned",
-                        status = "Active"
+                        status = "Active",
+                        history = " "
                     };
 
                     // Add the new entity to the context
@@ -112,7 +113,8 @@ namespace ITAM_DB.Controllers.Itot
                         li_description = row.li_description,
                         serial_no = row.serial_no,
                         assigned = "Not Assigned",
-                        status = "Active"
+                        status = "Active",
+                        history = " "
 
                     };
 

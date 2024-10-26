@@ -89,7 +89,7 @@ namespace ITAM_DB.Controllers.Cards
                 await _context.SaveChangesAsync();
 
                 // Now update the assigned fields in Itot_Pcs and Itot_Peripherals
-                var assignedValue = "Assigned to " + dto.firstName + " " + dto.lastName;
+                var assignedValue = dto.firstName + " " + dto.lastName + " , " ;
 
                 // Update Itot_Pcs for each pcId if it exists
                 foreach (var pcId in pcIds)
@@ -98,8 +98,10 @@ namespace ITAM_DB.Controllers.Cards
                     if (itotPc != null)
                     {
                         itotPc.assigned = assignedValue; // Assuming there's an 'assigned' property
+                        itotPc.history = (itotPc.history ?? " ") + assignedValue;
                     }
                 }
+                
 
                 // Update Itot_Peripherals for each peripheralId if it exists
                 foreach (var peripheralId in peripheralIds)
@@ -107,10 +109,10 @@ namespace ITAM_DB.Controllers.Cards
                     var itotPeripheral = await _context.Itot_Peripherals.FindAsync(peripheralId);
                     if (itotPeripheral != null)
                     {
-                        itotPeripheral.assigned = assignedValue; // Assuming there's an 'assigned' property
-                    }
+                    itotPeripheral.assigned = assignedValue; // Assuming there's an 'assigned' property
+                    itotPeripheral.history = (itotPeripheral.history ?? "  ") + assignedValue;
                 }
-
+            }                
                 // Save changes for Itot_Pcs and Itot_Peripherals
                 await _context.SaveChangesAsync();
 
@@ -178,6 +180,7 @@ namespace ITAM_DB.Controllers.Cards
                                 serial_no = pc.serial_no,
                                 assigned = pc.assigned,
                                 status = pc.status,
+                                history = pc.history,
                                 date_created = pc.date_created,
                                 date_updated = pc.date_updated
                             })
@@ -200,6 +203,7 @@ namespace ITAM_DB.Controllers.Cards
                                 serial_no = peripheral.serial_no,
                                 assigned = peripheral.assigned,
                                 status = peripheral.status,
+                                history =  peripheral.history,
                                 date_created = peripheral.date_created,
                                 date_updated = peripheral.date_updated
                             })
