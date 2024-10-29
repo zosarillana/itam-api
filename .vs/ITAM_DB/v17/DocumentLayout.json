@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\itot\\importitotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\itot\\importitotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\cards\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\cards\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\itot\\importitotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\itot\\importitotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\itot_pcdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -88,12 +88,8 @@
         },
         {
           "DockedWidth": 83,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 11,
@@ -168,13 +164,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CardController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Cards\\CardController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Cards\\CardController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Cards\\CardController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Cards\\CardController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAADgv1wAAAAAAAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAIMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T06:51:48.616Z",
               "EditorCaption": ""
@@ -213,8 +209,7 @@
               "RelativeToolTip": "ITAM_DB\\Model\\Operations\\Itot_Pc.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAqwBgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T07:24:10.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T07:24:10.681Z"
             },
             {
               "$type": "Document",
@@ -238,8 +233,7 @@
               "RelativeToolTip": "ITAM_DB\\Dto\\Itot_PeripheralDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T06:51:33.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T06:51:33.737Z"
             },
             {
               "$type": "Document",
@@ -251,8 +245,7 @@
               "RelativeToolTip": "ITAM_DB\\Controllers\\Itot\\ItotController.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAQwDkAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:39:04.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T03:39:04.964Z"
             },
             {
               "$type": "Document",
@@ -264,8 +257,7 @@
               "RelativeToolTip": "ITAM_DB\\Model\\Operations\\Itot_Peripheral.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T06:50:37.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T06:50:37.381Z"
             },
             {
               "$type": "Document",
@@ -289,21 +281,23 @@
               "RelativeToolTip": "ITAM_DB\\Dto\\Itot_PcDto.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAA6wBYAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T00:53:58.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T00:53:58.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ImportItotController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Itot\\ImportItotController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Itot\\ImportItotController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Itot\\ImportItotController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Itot\\ImportItotController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAkwDwAAAAkAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T00:52:16.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T00:52:16.019Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

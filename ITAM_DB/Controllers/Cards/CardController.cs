@@ -89,7 +89,7 @@ namespace ITAM_DB.Controllers.Cards
                 await _context.SaveChangesAsync();
 
                 // Now update the assigned fields in Itot_Pcs and Itot_Peripherals
-                var assignedValue = dto.firstName + " " + dto.lastName + " , " ;
+                var assignedCurrent = dto.firstName + " " + dto.lastName; // Full name
 
                 // Update Itot_Pcs for each pcId if it exists
                 foreach (var pcId in pcIds)
@@ -97,11 +97,19 @@ namespace ITAM_DB.Controllers.Cards
                     var itotPc = await _context.Itot_Pcs.FindAsync(pcId);
                     if (itotPc != null)
                     {
-                        itotPc.assigned = assignedValue; // Assuming there's an 'assigned' property
-                        itotPc.history = (itotPc.history ?? " ") + assignedValue;
+                        itotPc.assigned = assignedCurrent; // Set assigned name
+
+                        // Update history with correct formatting
+                        if (string.IsNullOrWhiteSpace(itotPc.history))
+                        {
+                            itotPc.history = assignedCurrent; // If empty, set the current name
+                        }
+                        else
+                        {
+                            itotPc.history += ", " + assignedCurrent; // If not empty, append with a comma
+                        }
                     }
                 }
-                
 
                 // Update Itot_Peripherals for each peripheralId if it exists
                 foreach (var peripheralId in peripheralIds)
@@ -109,10 +117,19 @@ namespace ITAM_DB.Controllers.Cards
                     var itotPeripheral = await _context.Itot_Peripherals.FindAsync(peripheralId);
                     if (itotPeripheral != null)
                     {
-                    itotPeripheral.assigned = assignedValue; // Assuming there's an 'assigned' property
-                    itotPeripheral.history = (itotPeripheral.history ?? "  ") + assignedValue;
+                        itotPeripheral.assigned = assignedCurrent; // Set assigned name
+
+                        // Update history with correct formatting
+                        if (string.IsNullOrWhiteSpace(itotPeripheral.history))
+                        {
+                            itotPeripheral.history = assignedCurrent; // If empty, set the current name
+                        }
+                        else
+                        {
+                            itotPeripheral.history += ", " + assignedCurrent; // If not empty, append with a comma
+                        }
+                    }
                 }
-            }                
                 // Save changes for Itot_Pcs and Itot_Peripherals
                 await _context.SaveChangesAsync();
 
@@ -214,5 +231,105 @@ namespace ITAM_DB.Controllers.Cards
 
             return Ok(result);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Pc_CardAllDataDto>> GetPcCardById(int id)
+        {
+            // Fetch the specific Pc_Card by id
+            var pc_card = await _context.Pc_Cards.FindAsync(id);
+
+            if (pc_card == null)
+            {
+                return NotFound(); // Return a 404 if no Pc_Card found with the given id
+            }
+
+            // Fetch related data
+            var pcsData = await _context.Itot_Pcs.ToListAsync();
+            var peripheralsData = await _context.Itot_Peripherals.ToListAsync();
+
+            // Split the comma-separated pc_ids and peripheral_ids
+            var pcIds = pc_card.pc_id?.Split(',')
+                .Select(id => int.TryParse(id, out var result) ? result : (int?)null)
+                .Where(id => id.HasValue)
+                .Select(id => id.Value)
+                .ToList();
+
+            var peripheralIds = pc_card.peripheral_id?.Split(',')
+                .Select(id => int.TryParse(id, out var result) ? result : (int?)null)
+                .Where(id => id.HasValue)
+                .Select(id => id.Value)
+                .ToList();
+
+            // Map the Pc_Card to Pc_CardAllDataDto
+            var result = new Pc_CardAllDataDto
+            {
+                id = pc_card.id,
+                firstName = pc_card.firstName,
+                lastName = pc_card.lastName,
+                emp_id = pc_card.emp_id,
+                contact_no = pc_card.contact_no,
+                dept_name = pc_card.dept_name,
+                company_name = pc_card.company_name,
+                location = pc_card.location,
+                date_assigned = pc_card.date_assigned,
+                date_created = pc_card.date_created,
+                date_updated = pc_card.date_updated,
+
+                // List of Pcs (filtered by pc_id)
+                Pcs = pcsData
+                    .Where(pc => pcIds != null && pcIds.Contains(pc.id))
+                    .Select(pc => new Itot_PcDto
+                    {
+                        id = pc.id,
+                        asset_barcode = pc.asset_barcode,
+                        date_acquired = pc.date_acquired,
+                        pc_type = pc.pc_type,
+                        brand = pc.brand,
+                        model = pc.model,
+                        processor = pc.processor,
+                        ram = pc.ram,
+                        storage_capacity = pc.storage_capacity,
+                        storage_type = pc.storage_type,
+                        operating_system = pc.operating_system,
+                        graphics = pc.graphics,
+                        size = pc.size,
+                        color = pc.color,
+                        li_description = pc.li_description,
+                        serial_no = pc.serial_no,
+                        assigned = pc.assigned,
+                        status = pc.status,
+                        history = pc.history,
+                        date_created = pc.date_created,
+                        date_updated = pc.date_updated
+                    })
+                    .ToList(),
+
+                // List of Peripherals (filtered by peripheral_id)
+                Peripherals = peripheralsData
+                    .Where(peripheral => peripheralIds != null && peripheralIds.Contains(peripheral.id))
+                    .Select(peripheral => new Itot_PeripheralDto
+                    {
+                        id = peripheral.id,
+                        asset_barcode = peripheral.asset_barcode,
+                        date_acquired = peripheral.date_acquired,
+                        brand = peripheral.brand,
+                        model = peripheral.model,
+                        peripheral_type = peripheral.peripheral_type,
+                        size = peripheral.size,
+                        color = peripheral.color,
+                        li_description = peripheral.li_description,
+                        serial_no = peripheral.serial_no,
+                        assigned = peripheral.assigned,
+                        status = peripheral.status,
+                        history = peripheral.history,
+                        date_created = peripheral.date_created,
+                        date_updated = peripheral.date_updated
+                    })
+                    .ToList(),
+            };
+
+            return Ok(result);
+        }
+
     }
 }
