@@ -2,10 +2,7 @@
 {
     public class Itot_PeripheralDto
     {
-        public int id { get; set; }
-        public string accountable_user { get; set; } = string.Empty;
-        public string bu { get; set; } = string.Empty;
-        public string department { get; set; } = string.Empty;
+        public int id { get; set; }    
         public string date_acquired { get; set; } = string.Empty;
         public string asset_barcode { get; set; } = string.Empty;
         public string peripheral_type { get; set; }
