@@ -7,6 +7,26 @@
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\cards\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\cards\\pc_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\cards\\pc_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\cards\\pc_cardalldatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\cards\\pc_cardalldatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\cards\\pc_carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\cards\\pc_carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\cards\\user_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\cards\\user_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\operations\\itot_peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\operations\\itot_peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\itot\\importitotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\itot\\importitotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,36 +43,16 @@
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\itot\\itotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\operations\\itot_peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\operations\\itot_peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\operations\\itot_pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\operations\\itot_pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\cards\\pc_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\cards\\pc_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\data\\itotcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\data\\itotcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\cards\\user_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\cards\\user_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\cards\\pc_cardalldatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\cards\\pc_cardalldatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\cards\\pc_carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\cards\\pc_carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\cards\\user_carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -92,13 +92,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "Pc_CardAllDataDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Cards\\Pc_CardAllDataDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Cards\\Pc_CardAllDataDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Cards\\Pc_CardAllDataDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Cards\\Pc_CardAllDataDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T01:48:53.539Z"
             },
@@ -116,19 +116,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "Pc_CardDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Cards\\Pc_CardDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Cards\\Pc_CardDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Cards\\Pc_CardDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Cards\\Pc_CardDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T00:23:39.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "ItotContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\ItotContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\ItotContext.cs",
@@ -170,38 +170,38 @@
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Cards\\CardController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Cards\\CardController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Cards\\CardController.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAAAIMAAAARAAAA",
+              "ViewState": "AQIAAAgBAAAAAAAAAAASwCoBAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T06:51:48.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Pc_Card.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Cards\\Pc_Card.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Cards\\Pc_Card.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Cards\\Pc_Card.cs",
               "RelativeToolTip": "ITAM_DB\\Model\\Cards\\Pc_Card.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T08:49:10.31Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "User_Card.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Cards\\User_Card.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Cards\\User_Card.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Cards\\User_Card.cs",
               "RelativeToolTip": "ITAM_DB\\Model\\Cards\\User_Card.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T08:48:53.652Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Itot_Pc.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Operations\\Itot_Pc.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Operations\\Itot_Pc.cs",
@@ -213,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\WeatherForecastController.cs",
@@ -225,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Itot_PeripheralDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Itot_PeripheralDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Itot_PeripheralDto.cs",
@@ -237,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "ItotController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Itot\\ItotController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Itot\\ItotController.cs",
@@ -273,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Itot_PcDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Itot_PcDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Itot_PcDto.cs",
@@ -285,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ImportItotController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Itot\\ImportItotController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Itot\\ImportItotController.cs",

@@ -6,6 +6,7 @@ using ITAM_DB.Dto.Cards;
 using ITAM_DB.Model.Cards;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace ITAM_DB.Controllers.Cards
 {
@@ -64,10 +65,40 @@ namespace ITAM_DB.Controllers.Cards
             }
             catch (Exception ex)
             {
-                // Catch any other unexpected exceptions
                 return BadRequest("Error parsing pc_id or peripheral_id: " + ex.Message);
             }
 
+            // Retrieve all existing Pc_Cards to memory
+            var existingCards = await _context.Pc_Cards.ToListAsync();
+
+            // Check if any pc_id or peripheral_id exists in any current records
+            bool duplicatePcExists = existingCards.Any(card =>
+                card.pc_id.Split(',')
+                          .Select(id => int.TryParse(id.Trim(), out var result) ? result : (int?)null)
+                          .Where(id => id.HasValue)
+                          .Select(id => id.Value)
+                          .Intersect(pcIds)
+                          .Any());
+
+            bool duplicatePeripheralExists = existingCards.Any(card =>
+                card.peripheral_id.Split(',')
+                                  .Select(id => int.TryParse(id.Trim(), out var result) ? result : (int?)null)
+                                  .Where(id => id.HasValue)
+                                  .Select(id => id.Value)
+                                  .Intersect(peripheralIds)
+                                  .Any());
+
+            if (duplicatePcExists)
+            {
+                return BadRequest("Duplicate pc_id exists.");
+            }
+
+            if (duplicatePeripheralExists)
+            {
+                return BadRequest("Duplicate peripheral_id exists.");
+            }
+
+            // Proceed with creating a new Pc_Card entry
             var pcCard = new Pc_Card
             {
                 firstName = dto.firstName,
@@ -76,6 +107,7 @@ namespace ITAM_DB.Controllers.Cards
                 contact_no = dto.contact_no,
                 dept_name = dto.dept_name,
                 company_name = dto.company_name,
+                position = dto.position,
                 location = dto.location,
                 date_assigned = dto.date_assigned,
                 pc_id = dto.pc_id, // Keep as string for database insertion
@@ -84,64 +116,59 @@ namespace ITAM_DB.Controllers.Cards
 
             try
             {
-                // Add the new Pc_Card to the context
                 _context.Pc_Cards.Add(pcCard);
                 await _context.SaveChangesAsync();
 
                 // Now update the assigned fields in Itot_Pcs and Itot_Peripherals
-                var assignedCurrent = dto.firstName + " " + dto.lastName; // Full name
+                var assignedCurrent = dto.firstName + " " + dto.lastName;
 
-                // Update Itot_Pcs for each pcId if it exists
                 foreach (var pcId in pcIds)
                 {
                     var itotPc = await _context.Itot_Pcs.FindAsync(pcId);
                     if (itotPc != null)
                     {
-                        itotPc.assigned = assignedCurrent; // Set assigned name
+                        itotPc.assigned = assignedCurrent;
 
-                        // Update history with correct formatting
                         if (string.IsNullOrWhiteSpace(itotPc.history))
                         {
-                            itotPc.history = assignedCurrent; // If empty, set the current name
+                            itotPc.history = assignedCurrent;
                         }
                         else
                         {
-                            itotPc.history += ", " + assignedCurrent; // If not empty, append with a comma
+                            itotPc.history += ", " + assignedCurrent;
                         }
                     }
                 }
 
-                // Update Itot_Peripherals for each peripheralId if it exists
                 foreach (var peripheralId in peripheralIds)
                 {
                     var itotPeripheral = await _context.Itot_Peripherals.FindAsync(peripheralId);
                     if (itotPeripheral != null)
                     {
-                        itotPeripheral.assigned = assignedCurrent; // Set assigned name
+                        itotPeripheral.assigned = assignedCurrent;
 
-                        // Update history with correct formatting
                         if (string.IsNullOrWhiteSpace(itotPeripheral.history))
                         {
-                            itotPeripheral.history = assignedCurrent; // If empty, set the current name
+                            itotPeripheral.history = assignedCurrent;
                         }
                         else
                         {
-                            itotPeripheral.history += ", " + assignedCurrent; // If not empty, append with a comma
+                            itotPeripheral.history += ", " + assignedCurrent;
                         }
                     }
                 }
-                // Save changes for Itot_Pcs and Itot_Peripherals
+
                 await _context.SaveChangesAsync();
 
-                // Return the updated list of Pc_Cards
                 return Ok(await _context.Pc_Cards.ToListAsync());
             }
             catch (DbUpdateException ex)
             {
-                // Log the exception (consider using a logging framework)
                 return BadRequest("Error saving the Pc_Card: " + ex.InnerException?.Message ?? ex.Message);
             }
         }
+
+
 
 
         [HttpGet]
@@ -167,6 +194,7 @@ namespace ITAM_DB.Controllers.Cards
                         lastName = pcc.lastName,
                         emp_id = pcc.emp_id,
                         contact_no = pcc.contact_no,
+                        position = pcc.position,
                         dept_name = pcc.dept_name,
                         company_name = pcc.company_name,
                         location = pcc.location,
@@ -268,6 +296,7 @@ namespace ITAM_DB.Controllers.Cards
                 lastName = pc_card.lastName,
                 emp_id = pc_card.emp_id,
                 contact_no = pc_card.contact_no,
+                position = pc_card.position,
                 dept_name = pc_card.dept_name,
                 company_name = pc_card.company_name,
                 location = pc_card.location,
