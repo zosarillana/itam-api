@@ -15,7 +15,7 @@ namespace ITAM_DB.Controllers.Itot
         private readonly ILogger<ImportItotController> _logger;
         public ItotController(ItotContext context, ILogger<ImportItotController> logger)
         {
-            _context = context;   
+            _context = context;
             _logger = logger;
         }
         //itot pcs
@@ -24,7 +24,7 @@ namespace ITAM_DB.Controllers.Itot
         {
             var items = await _context.Itot_Pcs.ToListAsync(); // Use your DbSet for Itot_Pc
             return Ok(items); // Return 200 OK with the list of items
-        }        
+        }
 
         [HttpGet("pc/{id}")]
         public async Task<ActionResult<Itot_Pc>> GetById(int id)
@@ -38,6 +38,26 @@ namespace ITAM_DB.Controllers.Itot
 
             return Ok(item); // Return 200 OK with the item
         }
+
+        [HttpDelete("pc/delete/{id}")]
+        public async Task<ActionResult> DeletePc(int id)
+        {
+            // Find the peripheral by its ID
+            var pc = await _context.Itot_Pcs.FindAsync(id);
+
+            // Check if the peripheral exists
+            if (pc == null)
+            {
+                return NotFound(new { message = "Pc not found." });  // Return JSON response
+            }
+
+            // Remove the peripheral from the database
+            _context.Itot_Pcs.Remove(pc);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Pc deleted successfully." });  // Return JSON response
+        }
+
         [HttpPost("pc/add")]
         public async Task<ActionResult<List<Itot_Pc>>> CreatePc([FromBody] Itot_PcDto dto)
         {
@@ -133,7 +153,7 @@ namespace ITAM_DB.Controllers.Itot
             return Ok(items); // Return 200 OK with the list of items
         }
 
-        
+
         [HttpGet("peripherals/{id}")]
         public async Task<ActionResult<Itot_Peripheral>> GetByIdPeripherals(int id)
         {
@@ -147,6 +167,26 @@ namespace ITAM_DB.Controllers.Itot
             return Ok(item); // Return 200 OK with the item
         }
 
+        [HttpDelete("peripherals/delete/{id}")]
+        public async Task<ActionResult> DeletePeripheral(int id)
+        {
+            // Find the peripheral by its ID
+            var peripheral = await _context.Itot_Peripherals.FindAsync(id);
+
+            // Check if the peripheral exists
+            if (peripheral == null)
+            {
+                return NotFound(new { message = "Peripheral not found." });  // Return JSON response
+            }
+
+            // Remove the peripheral from the database
+            _context.Itot_Peripherals.Remove(peripheral);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Peripheral deleted successfully." });  // Return JSON response
+        }
+
+
         [HttpPost("peripherals/add")]
         public async Task<ActionResult<List<Itot_Peripheral>>> CreatePeripheral([FromBody] Itot_PeripheralDto dto)
         {
@@ -155,11 +195,19 @@ namespace ITAM_DB.Controllers.Itot
                 return BadRequest("Peripheral data is required.");
             }
 
+            // Check for existing peripheral with the same asset barcode
+            var existingPeripheral = await _context.Itot_Peripherals
+                                                   .FirstOrDefaultAsync(p => p.asset_barcode == dto.asset_barcode);
+
+            if (existingPeripheral != null)
+            {
+                return BadRequest("A peripheral with the same asset barcode already exists.");
+            }
+
             var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
 
             var peripheral = new Itot_Peripheral
             {
-
                 date_acquired = dto.date_acquired,
                 asset_barcode = dto.asset_barcode,
                 peripheral_type = dto.peripheral_type,
@@ -169,11 +217,9 @@ namespace ITAM_DB.Controllers.Itot
                 model = dto.model,
                 color = dto.color,
                 serial_no = dto.serial_no,
-                assigned = dto.assigned,
-                status = dto.status,
+                assigned = "Assigned",
+                status = "Active",
                 history = dto.history,
-                date_created = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone),
-                date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone)
             };
 
             _context.Itot_Peripherals.Add(peripheral);
@@ -182,44 +228,56 @@ namespace ITAM_DB.Controllers.Itot
             return Ok(await _context.Itot_Peripherals.ToListAsync());
         }
 
+
         [HttpPut("peripherals/update/{id}")]
-        public async Task<ActionResult> UpdatePeripheral(int id, [FromBody] Itot_PeripheralDto dto)
+        public async Task<ActionResult<Itot_Peripheral>> UpdatePeripheral(int id, [FromBody] Itot_PeripheralDto dto)
         {
             if (dto == null)
             {
                 return BadRequest("Peripheral data is required.");
             }
 
-            // Find the existing peripheral by ID
-            var peripheral = await _context.Itot_Peripherals.FindAsync(id);
-            if (peripheral == null)
+            // Find the peripheral by id
+            var existingPeripheral = await _context.Itot_Peripherals
+                                                    .FirstOrDefaultAsync(p => p.id == id);
+
+            if (existingPeripheral == null)
             {
-                return NotFound($"Peripheral with ID {id} not found.");
+                return NotFound($"Peripheral with id {id} not found.");
             }
 
-            // Update peripheral properties with values from the DTO
-            peripheral.date_acquired = dto.date_acquired;
-            peripheral.asset_barcode = dto.asset_barcode;
-            peripheral.peripheral_type = dto.peripheral_type;
-            peripheral.li_description = dto.li_description;
-            peripheral.size = dto.size;
-            peripheral.brand = dto.brand;
-            peripheral.model = dto.model;
-            peripheral.color = dto.color;
-            peripheral.serial_no = dto.serial_no;
-            peripheral.assigned = dto.assigned;
-            peripheral.status = dto.status;
-            peripheral.history = dto.history;
+            // Optionally, check if the asset barcode is being changed and already exists
+            if (existingPeripheral.asset_barcode != dto.asset_barcode)
+            {
+                var barcodeExists = await _context.Itot_Peripherals
+                                                   .AnyAsync(p => p.asset_barcode == dto.asset_barcode);
+                if (barcodeExists)
+                {
+                    return BadRequest("A peripheral with the same asset barcode already exists.");
+                }
+            }
 
+            // Update the properties of the existing peripheral
+            existingPeripheral.date_acquired = dto.date_acquired;
+            existingPeripheral.asset_barcode = dto.asset_barcode;
+            existingPeripheral.peripheral_type = dto.peripheral_type;
+            existingPeripheral.li_description = dto.li_description;
+            existingPeripheral.size = dto.size;
+            existingPeripheral.brand = dto.brand;
+            existingPeripheral.model = dto.model;
+            existingPeripheral.color = dto.color;
+            existingPeripheral.serial_no = dto.serial_no;
+            existingPeripheral.history = dto.history;
 
-            // Update the date_updated field with the current time in Manila time zone
-            var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
-            peripheral.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
+            // Optional: If you want to modify other fields like 'assigned' or 'status', you can add that here
+            // For example, you can keep 'assigned' as "Assigned" or allow changes based on the dto
 
             // Save changes to the database
+            _context.Itot_Peripherals.Update(existingPeripheral);
             await _context.SaveChangesAsync();
 
-            return NoContent(); // Return 204 No Content to indicate successful update
+            return Ok(existingPeripheral);
         }
+
     }
 }
