@@ -360,5 +360,25 @@ namespace ITAM_DB.Controllers.Cards
             return Ok(result);
         }
 
+        //for delete 
+
+        //[HttpDelete("card/delete/{id}")]
+        //public async Task<ActionResult> CardDelete(int id)
+        //{
+        //    // Find the peripheral by its ID
+        //    var peripheral = await _context.Itot_Peripherals.FindAsync(id);
+
+        //    // Check if the peripheral exists
+        //    if (peripheral == null)
+        //    {
+        //        return NotFound(new { message = "Card not found." });  // Return JSON response
+        //    }
+
+        //    // Remove the peripheral from the database
+        //    _context.Itot_Peripherals.Remove(peripheral);
+        //    await _context.SaveChangesAsync();
+
+        //    return Ok(new { message = "Card deleted successfully." });  // Return JSON response
+        //}
     }
 }

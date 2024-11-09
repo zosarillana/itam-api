@@ -18,7 +18,7 @@ namespace ITAM_API.Model.Operations
         public string graphics { get; set; } = string.Empty;
         public string size { get; set; } = string.Empty;
         public string color { get; set; } = string.Empty;
-        public string li_description { get; set; } = string.Empty;
+        public string? li_description { get; set; } = string.Empty;
         public string serial_no { get; set; } = string.Empty;
         public string assigned { get; set; } = string.Empty;
         public string status {  get; set; } = string.Empty;

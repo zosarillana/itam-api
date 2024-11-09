@@ -84,7 +84,7 @@ namespace ITAM_DB.Controllers.Itot
                 graphics = dto.graphics,
                 size = dto.size,
                 color = dto.color,
-                li_description = dto.li_description,
+                li_description = $"{dto.pc_type} {dto.processor} {dto.ram} {dto.storage_capacity} {dto.storage_type} {dto.color}",
                 serial_no = dto.serial_no,
                 assigned = dto.assigned,
                 status = dto.status,
@@ -101,7 +101,7 @@ namespace ITAM_DB.Controllers.Itot
         }
 
         [HttpPut("pc/update/{id}")]
-        public async Task<ActionResult> UpdatePc(int id, [FromBody] Itot_PcDto dto)
+        public async Task<ActionResult<Itot_Pc>> UpdatePc(int id, [FromBody] Itot_PcDto dto)
         {
             if (dto == null)
             {
@@ -109,41 +109,56 @@ namespace ITAM_DB.Controllers.Itot
             }
 
             // Find the existing PC by ID
-            var pc = await _context.Itot_Pcs.FindAsync(id);
-            if (pc == null)
+            var existingPc = await _context.Itot_Pcs
+                                            .FirstOrDefaultAsync(p => p.id == id);
+
+            if (existingPc == null)
             {
                 return NotFound($"PC with ID {id} not found.");
             }
 
-            // Update the PC properties from the DTO
-            pc.asset_barcode = dto.asset_barcode;
-            pc.date_acquired = dto.date_acquired;
-            pc.pc_type = dto.pc_type;
-            pc.brand = dto.brand;
-            pc.model = dto.model;
-            pc.processor = dto.processor;
-            pc.ram = dto.ram;
-            pc.storage_capacity = dto.storage_capacity;
-            pc.storage_type = dto.storage_type;
-            pc.operating_system = dto.operating_system;
-            pc.graphics = dto.graphics;
-            pc.size = dto.size;
-            pc.color = dto.color;
-            pc.li_description = dto.li_description;
-            pc.serial_no = dto.serial_no;
-            pc.assigned = dto.assigned;
-            pc.status = dto.status;
-            pc.history = dto.history;
+            // Check if the asset barcode is being changed and if it already exists
+            if (existingPc.asset_barcode != dto.asset_barcode)
+            {
+                var barcodeExists = await _context.Itot_Pcs
+                                                  .AnyAsync(p => p.asset_barcode == dto.asset_barcode);
+                if (barcodeExists)
+                {
+                    return BadRequest("A PC with the same asset barcode already exists.");
+                }
+            }
+
+            // Update the properties of the existing PC
+            existingPc.asset_barcode = dto.asset_barcode;
+            existingPc.date_acquired = dto.date_acquired;
+            existingPc.pc_type = dto.pc_type;
+            existingPc.brand = dto.brand;
+            existingPc.model = dto.model;
+            existingPc.processor = dto.processor;
+            existingPc.ram = dto.ram;
+            existingPc.storage_capacity = dto.storage_capacity;
+            existingPc.storage_type = dto.storage_type;
+            existingPc.operating_system = dto.operating_system;
+            existingPc.graphics = dto.graphics;
+            existingPc.size = dto.size;
+            existingPc.color = dto.color;
+            existingPc.li_description = dto.li_description;
+            existingPc.serial_no = dto.serial_no;
+            existingPc.assigned = dto.assigned;
+            existingPc.status = dto.status;
+            existingPc.history = dto.history;
 
             // Update the date_updated field with the current date and time in Manila time zone
             var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
-            pc.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
+            existingPc.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
             // Save changes to the database
+            _context.Itot_Pcs.Update(existingPc);
             await _context.SaveChangesAsync();
 
-            return NoContent(); // Return 204 No Content to indicate successful update
+            return Ok(existingPc); // Return the updated entity to confirm successful update
         }
+
 
         // itot peripherals
         [HttpGet("peripherals")]
@@ -211,7 +226,7 @@ namespace ITAM_DB.Controllers.Itot
                 date_acquired = dto.date_acquired,
                 asset_barcode = dto.asset_barcode,
                 peripheral_type = dto.peripheral_type,
-                li_description = dto.li_description,
+                li_description = $"{dto.brand} {dto.peripheral_type} {dto.color}", // Set automatically
                 size = dto.size,
                 brand = dto.brand,
                 model = dto.model,
@@ -278,6 +293,5 @@ namespace ITAM_DB.Controllers.Itot
 
             return Ok(existingPeripheral);
         }
-
     }
 }
