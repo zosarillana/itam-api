@@ -18,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\Computers\" />
+    <Folder Include="Controllers\User\" />
+    <Folder Include="Controllers\Sets\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

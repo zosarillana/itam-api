@@ -1,20 +1,35 @@
 ﻿using ITAM_API.Model.Operations;
+using ITAM_DB.Controllers.Peripherals;
+using ITAM_DB.Data.Peripherals;
 using ITAM_DB.Model.Cards;
+using ITAM_DB.Model.Peripherals;
 using Microsoft.EntityFrameworkCore;
+using PeripheralMonitor = ITAM_DB.Model.Peripherals.Monitor;
 
 namespace ITAM_API.Data
 {
-    public class ItotContext : DbContext // Inheriting from DbContext
+    public class ItotContext : DbContext
     {
         public ItotContext(DbContextOptions<ItotContext> options) : base(options) { }
+
         public DbSet<Itot_Pc> Itot_Pcs { get; set; }
         public DbSet<Itot_Peripheral> Itot_Peripherals { get; set; }
         public DbSet<Pc_Card> Pc_Cards { get; set; }
         public DbSet<User_Card> User_Cards { get; set; }
+        public DbSet<AVR> AVRs { get; set; }
+        public DbSet<Bag> Bags { get; set; }
+        public DbSet<Dongle> Dongles { get; set; }
+        public DbSet<ExternalDrive> ExternalDrives { get; set; }
+        public DbSet<Keyboard> Keyboards { get; set; }
+        public DbSet<LanAdapter> LanAdapters { get; set; }
+        public DbSet<PeripheralMonitor> Monitors { get; set; }
+        public DbSet<Mouse> Mouses { get; set; }
+        public DbSet<UPS> UPSs { get; set; }
+        public DbSet<WebCam> WebCamControllers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configuration for Itot_Pc
+            // Itot_Pc configuration
             modelBuilder.Entity<Itot_Pc>()
                 .HasKey(i => i.id);
 
@@ -22,7 +37,7 @@ namespace ITAM_API.Data
                 .Property(i => i.id)
                 .ValueGeneratedOnAdd();
 
-            // Configuration for Itot_Peripheral
+            // Itot_Peripheral configuration
             modelBuilder.Entity<Itot_Peripheral>()
                 .HasKey(i => i.id);
 
@@ -30,19 +45,15 @@ namespace ITAM_API.Data
                 .Property(i => i.id)
                 .ValueGeneratedOnAdd();
 
-            // Configuration for Pc_Card
+            // Pc_Card configuration
             modelBuilder.Entity<Pc_Card>()
                 .HasKey(i => i.id);
 
             modelBuilder.Entity<Pc_Card>()
                .Property(i => i.id)
-                .ValueGeneratedOnAdd();
-            // ** Removed Foreign Key Relationships for pc_id and peripheral_id **
-            // If you want to just store the IDs without any relationships, 
-            // you can leave them out entirely. The properties will still exist 
-            // in the entity, but won't enforce any foreign key constraints.
+               .ValueGeneratedOnAdd();
 
-            // Configuration for User_Card
+            // User_Card configuration
             modelBuilder.Entity<User_Card>()
                 .HasKey(i => i.id);
 
@@ -50,7 +61,87 @@ namespace ITAM_API.Data
                 .Property(i => i.id)
                 .ValueGeneratedOnAdd();
 
-            // ** Removed Foreign Key Relationships for pc_id and peripheral_id in User_Card **
+            // AVR configuration
+            modelBuilder.Entity<AVR>()
+                .HasKey(a => a.id);
+
+            modelBuilder.Entity<AVR>()
+                .Property(a => a.id)
+                .ValueGeneratedOnAdd();
+
+            // Bag configuration
+            modelBuilder.Entity<Bag>()
+                .HasKey(b => b.id);
+
+            modelBuilder.Entity<Bag>()
+                .Property(b => b.id)
+                .ValueGeneratedOnAdd();
+
+            // Dongle configuration
+            modelBuilder.Entity<Dongle>()
+                .HasKey(d => d.id);
+
+            modelBuilder.Entity<Dongle>()
+                .Property(d => d.id)
+                .ValueGeneratedOnAdd();
+
+            // ExternalDrive configuration
+            modelBuilder.Entity<ExternalDrive>()
+                .HasKey(e => e.id);
+
+            modelBuilder.Entity<ExternalDrive>()
+                .Property(e => e.id)
+                .ValueGeneratedOnAdd();
+
+            // Keyboard configuration
+            modelBuilder.Entity<Keyboard>()
+                .HasKey(k => k.id);
+
+            modelBuilder.Entity<Keyboard>()
+                .Property(k => k.id)
+                .ValueGeneratedOnAdd();
+
+            // LanAdapter configuration
+            modelBuilder.Entity<LanAdapter>()
+                .HasKey(l => l.id);
+
+            modelBuilder.Entity<LanAdapter>()
+                .Property(l => l.id)
+                .ValueGeneratedOnAdd();
+
+            // Monitor configuration
+            modelBuilder.Entity<PeripheralMonitor>()
+                .HasKey(m => m.id);
+
+            modelBuilder.Entity<PeripheralMonitor>()
+                .Property(m => m.id)
+                .ValueGeneratedOnAdd();
+
+            // Mouse configuration
+            modelBuilder.Entity<Mouse>()
+                .HasKey(m => m.id);
+
+            modelBuilder.Entity<Mouse>()
+                .Property(m => m.id)
+                .ValueGeneratedOnAdd();
+
+            // UPS configuration
+            modelBuilder.Entity<UPS>()
+                .HasKey(u => u.id);
+
+            modelBuilder.Entity<UPS>()
+                .Property(u => u.id)
+                .ValueGeneratedOnAdd();
+
+            // WebCamController configuration
+            modelBuilder.Entity<WebCam>()
+                .HasKey(w => w.id);
+
+            modelBuilder.Entity<WebCam>()
+                .Property(w => w.id)
+                .ValueGeneratedOnAdd();
+
+            // Additional configuration can be added as needed for each entity.
         }
     }
 }
