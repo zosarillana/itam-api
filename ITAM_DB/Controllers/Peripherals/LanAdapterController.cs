@@ -1,12 +1,100 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ITAM_DB.Data.Computers;
+using ITAM_DB.Data.Peripherals;
+using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Model.Peripherals;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ITAM_DB.Controllers.Peripherals
 {
+    [ApiController]
+    [Route("[controller]")]
     public class LanAdapterController : Controller
     {
-        public IActionResult Index()
+        private readonly LanAdapterContext _context;
+        public LanAdapterController(LanAdapterContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<LanAdapter>>> GetAllLan()
+        {
+            var avrs = await _context.LanAdapters.ToListAsync(); // Use your DbSet for AVR
+            return Ok(avrs); // Return 200 OK with the list of items
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<List<LanAdapter>>> CreateKeyboard(LanAdapterDto dto)
+        {
+            if (dto == null)
+            {
+                return BadRequest("Keyboard Data is Required,");
+            }
+
+            var lanAdapter = new LanAdapter
+            {
+                model = dto.model,
+                color = dto.color,
+                brand = dto.brand,
+                type = dto.type,
+                assetCode = dto.assetCode,
+                acqDate = dto.acqDate,
+                srlNumber = dto.srlNumber,
+            };
+            _context.LanAdapters.Add(lanAdapter);
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.LanAdapters.ToListAsync());
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<List<LanAdapter>>> UpdateKeyboard(int id, LanAdapterDto dto)
+        {
+            if (dto == null)
+            {
+                return BadRequest("lanAdapter data is required.");
+            }
+
+            // Find the existing AVR entity by ID
+            var lanAdapter = await _context.LanAdapters.FindAsync(id);
+            if (lanAdapter == null)
+            {
+                return NotFound($"No lanAdapter found with ID {id}.");
+            }
+
+            // Update the AVR properties
+            lanAdapter.model = dto.model;
+            lanAdapter.color = dto.color;
+            lanAdapter.brand = dto.brand;
+            lanAdapter.type = dto.type;
+            lanAdapter.assetCode = dto.assetCode;
+            lanAdapter.acqDate = dto.acqDate;
+            lanAdapter.srlNumber = dto.srlNumber;
+
+            // Save the changes to the database
+            await _context.SaveChangesAsync();
+
+            // Return the updated list of AVRs
+            return Ok(await _context.LanAdapters.ToListAsync());
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<List<Keyboard>>> DeleteKeyboard(int id)
+        {
+            // Find the existing AVR entity by ID
+            var keyboard = await _context.LanAdapters.FindAsync(id);
+            if (keyboard == null)
+            {
+                return NotFound($"No lanAdapter found with ID {id}.");
+            }
+
+            // Remove the AVR from the database
+            _context.LanAdapters.Remove(keyboard);
+            await _context.SaveChangesAsync();
+
+            // Return the updated list of AVRs
+            return Ok(await _context.LanAdapters.ToListAsync());
         }
     }
 }

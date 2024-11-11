@@ -25,7 +25,7 @@ namespace ITAM_API.Data
         public DbSet<PeripheralMonitor> Monitors { get; set; }
         public DbSet<Mouse> Mouses { get; set; }
         public DbSet<UPS> UPSs { get; set; }
-        public DbSet<WebCam> WebCamControllers { get; set; }
+        public DbSet<WebCam> WebCams{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
