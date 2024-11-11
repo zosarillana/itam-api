@@ -3,6 +3,7 @@ using ITAM_DB.Dto.Peripherals;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 
 namespace ITAM_DB.Controllers.Peripherals
 {
@@ -37,9 +38,12 @@ namespace ITAM_DB.Controllers.Peripherals
                 color = dto.color,
                 brand = dto.brand,
                 type = dto.type,
-                assetCode = dto.assetCode,
-                acqDate = dto.acqDate,
-                srlNumber = dto.srlNumber,
+                status = dto.status,
+                assigned = dto.assigned,
+                li_description = dto.li_description,
+                acquired_date = dto.acquired_date,
+                asset_barcode = dto.asset_barcode,
+                serial_no = dto.serial_no,
             };
             _context.Keyboards.Add(keyboard);
             await _context.SaveChangesAsync();
@@ -67,9 +71,12 @@ namespace ITAM_DB.Controllers.Peripherals
             keyboard.color = dto.color;
             keyboard.brand = dto.brand;
             keyboard.type = dto.type;
-            keyboard.assetCode = dto.assetCode;
-            keyboard.acqDate = dto.acqDate;
-            keyboard.srlNumber = dto.srlNumber;
+            keyboard.status = dto.status;
+            keyboard.assigned = dto.assigned;
+            keyboard.li_description = dto.li_description;
+            keyboard.acquired_date = dto.acquired_date;
+            keyboard.asset_barcode = dto.asset_barcode;
+            keyboard.serial_no = dto.serial_no;
 
             // Save the changes to the database
             await _context.SaveChangesAsync();

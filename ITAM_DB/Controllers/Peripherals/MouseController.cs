@@ -3,6 +3,7 @@ using ITAM_DB.Dto.Peripherals;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 
 namespace ITAM_DB.Controllers.Peripherals
 {
@@ -36,9 +37,12 @@ namespace ITAM_DB.Controllers.Peripherals
                 model = dto.model,
                 color = dto.color,
                 brand = dto.brand,
-                assetCode = dto.assetCode,
-                acqDate = dto.acqDate,
-                srlNumber = dto.srlNumber,
+                status = dto.status,
+                assigned = dto.assigned,
+                li_description = dto.li_description,
+                acquired_date = dto.acquired_date,
+                asset_barcode = dto.asset_barcode,
+                serial_no = dto.serial_no,
             };
             _context.Mouses.Add(mouse);
             await _context.SaveChangesAsync();
@@ -65,10 +69,11 @@ namespace ITAM_DB.Controllers.Peripherals
             mouse.model = dto.model;
             mouse.color = dto.color;
             mouse.brand = dto.brand;
-            mouse.assetCode = dto.assetCode;
-            mouse.acqDate = dto.acqDate;
-            mouse.srlNumber = dto.srlNumber;
-
+            mouse.status = dto.status;
+            mouse.li_description = dto.li_description;
+            mouse.acquired_date = dto.acquired_date;
+            mouse.asset_barcode = dto.asset_barcode;
+            mouse.serial_no = dto.serial_no;
             // Save the changes to the database
             await _context.SaveChangesAsync();
 

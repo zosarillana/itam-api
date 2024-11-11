@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ITAM_DB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d2aa64d16dac913a0063973a8e566c97e73ad26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92ea799256a83f94126d7071750ad2f73a45e280")]
 [assembly: System.Reflection.AssemblyProductAttribute("ITAM_DB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ITAM_DB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

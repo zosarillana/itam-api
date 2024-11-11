@@ -3,6 +3,7 @@ using ITAM_DB.Dto.Peripherals;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 
 namespace ITAM_DB.Controllers.Peripherals
 {
@@ -37,9 +38,11 @@ namespace ITAM_DB.Controllers.Peripherals
                 color = dto.color,
                 brand = dto.brand,
                 type = dto.type,
-                assetCode = dto.assetCode,
-                acqDate = dto.acqDate,
-                srlNumber = dto.srlNumber,
+                assigned = dto.assigned,
+                li_description = dto.li_description,
+                acquired_date = dto.acquired_date,
+                asset_barcode = dto.asset_barcode,
+                serial_no = dto.serial_no,
             };
             _context.ExternalDrives.Add(dongles);
             await _context.SaveChangesAsync();
@@ -66,10 +69,13 @@ namespace ITAM_DB.Controllers.Peripherals
             exdrive.model = dto.model;
             exdrive.color = dto.color;
             exdrive.brand = dto.brand;
+            exdrive.status = dto.status;
             exdrive.type = dto.type;
-            exdrive.assetCode = dto.assetCode;
-            exdrive.acqDate = dto.acqDate;
-            exdrive.srlNumber = dto.srlNumber;
+            exdrive.assigned = dto.assigned;
+            exdrive.li_description = dto.li_description;
+            exdrive.acquired_date = dto.acquired_date;
+            exdrive.asset_barcode = dto.asset_barcode;
+            exdrive.serial_no = dto.serial_no;
 
             // Save the changes to the database
             await _context.SaveChangesAsync();

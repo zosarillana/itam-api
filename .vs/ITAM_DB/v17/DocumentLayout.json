@@ -7,6 +7,150 @@
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\avrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\bagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\bagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\donglecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\donglecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\externaldrivecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\externaldrivecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\data\\peripherals\\avrcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\data\\peripherals\\avrcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\externaldrivedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\externaldrivedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\bagdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\bagdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\avrdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\avrdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\keyboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\keyboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\lanadaptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\lanadaptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\monitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\monitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\mousecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\mousecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\upscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\upscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\webcamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\webcamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\mousedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\mousedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\computers\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\computers\\desktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\ups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\ups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\webcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\webcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\sets\\desktopset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\sets\\desktopset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\mouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\mouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\lanadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\lanadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\keyboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\keyboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\externaldrive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\externaldrive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\dongle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\dongle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\avr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\avr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\webcamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\webcamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\upsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\upsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\monitordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\monitordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\lanadapterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\lanadapterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\keyboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\keyboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\dongledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\dongledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\operations\\itot_peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\operations\\itot_peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\operations\\itot_pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\operations\\itot_pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\computers\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\computers\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\cards\\pc_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\cards\\pc_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\data\\itotcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\data\\itotcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,52 +159,8 @@
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\data\\peripherals\\webcamcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\webcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\webcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\ups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\ups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\webcamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\webcamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\webcamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\webcamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\upsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\upsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\upscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\upscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\mousecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\mousecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\keyboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\keyboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\mouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\mouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\mousedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\mousedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\data\\peripherals\\bagcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\data\\peripherals\\bagcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\data\\peripherals\\avrcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\data\\peripherals\\avrcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\data\\peripherals\\donglecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,60 +187,8 @@
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\data\\peripherals\\upscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\monitordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\monitordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\bagdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\bagdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\dongledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\dongledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\externaldrivedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\externaldrivedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\keyboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\keyboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\lanadapterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\lanadapterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\monitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\monitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\peripherals\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\model\\peripherals\\monitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\lanadaptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\lanadaptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\externaldrivecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\externaldrivecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\donglecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\donglecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\itot\\itotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\itot\\itotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\peripherals\\bagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\peripherals\\bagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\dto\\peripherals\\avrdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\dto\\peripherals\\avrdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -150,11 +198,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 322,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 43,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 46,
               "Title": "ItotController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Itot\\ItotController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Itot\\ItotController.cs",
@@ -168,15 +216,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ItotContext.cs",
-              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\ItotContext.cs",
-              "RelativeDocumentMoniker": "ITAM_DB\\Data\\ItotContext.cs",
-              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\ItotContext.cs",
-              "RelativeToolTip": "ITAM_DB\\Data\\ItotContext.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAAABsAAAAkAAAA",
+              "DocumentIndex": 7,
+              "Title": "AVRDto.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\AVRDto.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\AVRDto.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\AVRDto.cs",
+              "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\AVRDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T03:34:39.193Z",
+              "WhenOpened": "2024-11-11T03:57:29.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LanAdapter.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\LanAdapter.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\LanAdapter.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\LanAdapter.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\LanAdapter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:49:21.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Keyboard.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Keyboard.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Keyboard.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Keyboard.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\Keyboard.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:49:19.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Dongle.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Dongle.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Dongle.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Dongle.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\Dongle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:49:13.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ExternalDrive.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\ExternalDrive.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\ExternalDrive.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\ExternalDrive.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\ExternalDrive.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:49:12.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Bag.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Bag.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Bag.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Bag.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\Bag.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:49:09.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DesktopSet.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Sets\\DesktopSet.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Sets\\DesktopSet.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Sets\\DesktopSet.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Sets\\DesktopSet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:45:17.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AVR.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\AVR.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\AVR.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\AVR.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\AVR.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:40:22.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Desktop.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Computers\\Desktop.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Computers\\Desktop.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Computers\\Desktop.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Computers\\Desktop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:40:06.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Laptop.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Computers\\Laptop.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Computers\\Laptop.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Computers\\Laptop.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Computers\\Laptop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:40:05.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Itot_Peripheral.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Operations\\Itot_Peripheral.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Operations\\Itot_Peripheral.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Operations\\Itot_Peripheral.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Operations\\Itot_Peripheral.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:39:56.848Z",
               "EditorCaption": ""
             },
             {
@@ -185,85 +363,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 37,
+              "Title": "ItotContext.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\ItotContext.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Data\\ItotContext.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\ItotContext.cs",
+              "RelativeToolTip": "ITAM_DB\\Data\\ItotContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGwAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:34:39.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "WebCamController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\WebCamController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\WebCamController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\WebCamController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\WebCamController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAuwDYAAAAAAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAuwE4AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:27:09.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "UPSController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\UPSController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\UPSController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\UPSController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\UPSController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAwwEAAAAAhAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAwwEwAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:24:01.334Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "MouseController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\MouseController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\MouseController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\MouseController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\MouseController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAcwF8AAAAAAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAcwEcAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:20:22.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "UPS.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\UPS.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\UPS.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\UPS.cs",
               "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\UPS.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:18:03.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "WebCam.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\WebCam.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\WebCam.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\WebCam.cs",
               "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\WebCam.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAyAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:57.831Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "Mouse.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Mouse.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Mouse.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Mouse.cs",
               "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\Mouse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:47.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 39,
               "Title": "BagContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\BagContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\BagContext.cs",
@@ -276,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 4,
               "Title": "AVRContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\AVRContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\AVRContext.cs",
@@ -289,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 40,
               "Title": "DongleContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\DongleContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\DongleContext.cs",
@@ -302,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 42,
               "Title": "ExternalDriveContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\ExternalDriveContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\ExternalDriveContext.cs",
@@ -315,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 41,
               "Title": "LanAdapterContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\LanAdapterContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\LanAdapterContext.cs",
@@ -328,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 43,
               "Title": "MonitorContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\MonitorContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\MonitorContext.cs",
@@ -341,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 44,
               "Title": "MouseContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\MouseContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\MouseContext.cs",
@@ -354,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 45,
               "Title": "UPSContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\UPSContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\UPSContext.cs",
@@ -367,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 38,
               "Title": "WebCamContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Peripherals\\WebCamContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Peripherals\\WebCamContext.cs",
@@ -380,182 +571,195 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 28,
               "Title": "UPSDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\UPSDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\UPSDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\UPSDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\UPSDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:23.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 27,
               "Title": "WebCamDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\WebCamDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\WebCamDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\WebCamDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\WebCamDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:22.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 6,
               "Title": "BagDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\BagDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\BagDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\BagDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\BagDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:21.311Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 8,
+              "Title": "KeyboardController.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
+              "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAwwEkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T01:36:06.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ExternalDriveDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\ExternalDriveDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\ExternalDriveDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\ExternalDriveDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\ExternalDriveDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:19.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "KeyboardDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\KeyboardDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\KeyboardDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\KeyboardDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\KeyboardDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:19.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "LanAdapterDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\LanAdapterDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\LanAdapterDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\LanAdapterDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\LanAdapterDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:18.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "MouseDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\MouseDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\MouseDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\MouseDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\MouseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T03:17:10.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "MonitorDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\MonitorDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\MonitorDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\MonitorDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\MonitorDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T02:41:56.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 20,
               "Title": "Monitor.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Monitor.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Monitor.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Monitor.cs",
               "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\Monitor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T02:42:09.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 10,
               "Title": "MonitorController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\MonitorController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\MonitorController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\MonitorController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\MonitorController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAIwCUAAAAgAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAwwE0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T02:24:25.049Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 9,
               "Title": "LanAdapterController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\LanAdapterController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\LanAdapterController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\LanAdapterController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\LanAdapterController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwCUAAAAiAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAwwEoAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T01:53:11.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 3,
               "Title": "ExternalDriveController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\ExternalDriveController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\ExternalDriveController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\ExternalDriveController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\ExternalDriveController.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAwwEQAAAAkAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAwwEcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T01:18:12.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 2,
               "Title": "DongleController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\DongleController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\DongleController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\DongleController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\DongleController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAUwFAAAAAcAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAUwEgAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T00:59:08.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 1,
               "Title": "BagController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\BagController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\BagController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\BagController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\BagController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwA0AAAAwAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T00:40:09.631Z",
               "EditorCaption": ""
@@ -599,7 +803,7 @@
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\AVRController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\AVRController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\AVRController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAIwGEAAAAFAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwEQAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T05:51:45.189Z",
               "IsPinned": true,
@@ -607,26 +811,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "KeyboardController.cs",
-              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
-              "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
-              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
-              "RelativeToolTip": "ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAuAAAA",
+              "DocumentIndex": 36,
+              "Title": "Pc_Card.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Cards\\Pc_Card.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Cards\\Pc_Card.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Cards\\Pc_Card.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Cards\\Pc_Card.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T01:36:06.917Z",
+              "WhenOpened": "2024-11-11T03:41:10.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 32,
               "Title": "DongleDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\DongleDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\DongleDto.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\DongleDto.cs",
               "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\DongleDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T01:05:35.696Z",
               "EditorCaption": ""
@@ -634,14 +838,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "AVRDto.cs",
-              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\AVRDto.cs",
-              "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\AVRDto.cs",
-              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\AVRDto.cs",
-              "RelativeToolTip": "ITAM_DB\\Dto\\Peripherals\\AVRDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Title": "Itot_Pc.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Operations\\Itot_Pc.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Model\\Operations\\Itot_Pc.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Operations\\Itot_Pc.cs",
+              "RelativeToolTip": "ITAM_DB\\Model\\Operations\\Itot_Pc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T06:09:57.606Z"
+              "WhenOpened": "2024-11-11T03:39:57.781Z",
+              "EditorCaption": ""
             }
           ]
         }

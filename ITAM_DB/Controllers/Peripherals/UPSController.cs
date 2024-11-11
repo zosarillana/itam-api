@@ -3,6 +3,7 @@ using ITAM_DB.Dto.Peripherals;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 
 namespace ITAM_DB.Controllers.Peripherals
 {
@@ -36,9 +37,12 @@ namespace ITAM_DB.Controllers.Peripherals
                 model = dto.model,
                 color = dto.color,
                 brand = dto.brand,
-                assetCode = dto.assetCode,
-                acqDate = dto.acqDate,
-                srlNumber = dto.srlNumber,
+                status = dto.status,
+                assigned = dto.assigned,
+                li_description = dto.li_description,
+                acquired_date = dto.acquired_date,
+                asset_barcode = dto.asset_barcode,
+                serial_no = dto.serial_no,
             };
             _context.UPSs.Add(ups);
             await _context.SaveChangesAsync();
@@ -65,9 +69,12 @@ namespace ITAM_DB.Controllers.Peripherals
             ups.model = dto.model;
             ups.color = dto.color;
             ups.brand = dto.brand;
-            ups.assetCode = dto.assetCode;
-            ups.acqDate = dto.acqDate;
-            ups.srlNumber = dto.srlNumber;
+            ups.status = dto.status;
+            ups.assigned = dto.assigned;
+            ups.li_description = dto.li_description;
+            ups.acquired_date = dto.acquired_date;
+            ups.asset_barcode = dto.asset_barcode;
+            ups.serial_no = dto.serial_no;
 
             // Save the changes to the database
             await _context.SaveChangesAsync();

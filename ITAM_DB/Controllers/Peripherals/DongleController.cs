@@ -3,6 +3,7 @@ using ITAM_DB.Dto.Peripherals;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 
 namespace ITAM_DB.Controllers.Peripherals
 {
@@ -37,9 +38,12 @@ namespace ITAM_DB.Controllers.Peripherals
                 model = dto.model,
                 color = dto.color,
                 brand = dto.brand,
-                assetCode = dto.assetCode,
-                acqDate = dto.acqDate,
-                srlNumber = dto.srlNumber,
+                status = dto.status,
+                assigned = dto.assigned,
+                li_description = dto.li_description,
+                acquired_date = dto.acquired_date,
+                asset_barcode = dto.asset_barcode,
+                serial_no = dto.serial_no,
             };
             _context.Dongles.Add(dongle);
             await _context.SaveChangesAsync();
@@ -66,10 +70,13 @@ namespace ITAM_DB.Controllers.Peripherals
             dongle.model = dto.model;
             dongle.color = dto.color;
             dongle.brand = dto.brand;
+            dongle.status = dto.status;
             dongle.type = dto.type;
-            dongle.assetCode = dto.assetCode;
-            dongle.acqDate = dto.acqDate;
-            dongle.srlNumber = dto.srlNumber;
+            dongle.assigned = dto.assigned;
+            dongle.li_description = dto.li_description;
+            dongle.acquired_date = dto.acquired_date;
+            dongle.asset_barcode = dto.asset_barcode;
+            dongle.serial_no = dto.serial_no;
 
             // Save the changes to the database
             await _context.SaveChangesAsync();

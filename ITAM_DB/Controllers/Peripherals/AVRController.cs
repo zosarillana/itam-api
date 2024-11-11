@@ -37,9 +37,12 @@ namespace ITAM_DB.Controllers.Peripherals
                 model = dto.model,
                 color = dto.color,
                 brand = dto.brand,
-                assetCode = dto.assetCode,
-                acqDate = dto.acqDate,
-                srlNumber = dto.srlNumber,
+                status = dto.status,
+                assigned = dto.assigned,
+                li_description = dto.li_description,
+                acquired_date = dto.acquired_date,
+                asset_barcode = dto.asset_barcode,
+                serial_no = dto.serial_no,
             };
             _context.AVRs.Add(avr);
             await _context.SaveChangesAsync();
@@ -66,9 +69,12 @@ namespace ITAM_DB.Controllers.Peripherals
             avr.model = dto.model;
             avr.color = dto.color;
             avr.brand = dto.brand;
-            avr.assetCode = dto.assetCode;
-            avr.acqDate = dto.acqDate;
-            avr.srlNumber = dto.srlNumber;
+            avr.status = dto.status;
+            avr.assigned = dto.assigned;
+            avr.li_description = dto.li_description;
+            avr.acquired_date = dto.acquired_date;
+            avr.asset_barcode = dto.asset_barcode;
+            avr.serial_no = dto.serial_no;
 
             // Save the changes to the database
             await _context.SaveChangesAsync();

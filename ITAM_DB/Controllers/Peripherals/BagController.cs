@@ -3,6 +3,7 @@ using ITAM_DB.Dto.Peripherals;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 
 namespace ITAM_DB.Controllers.Peripherals
 {
@@ -36,9 +37,12 @@ namespace ITAM_DB.Controllers.Peripherals
                 color = dto.color,
                 brand = dto.brand,
                 type = dto.type,
-                assetCode = dto.assetCode,
-                acqDate = dto.acqDate,
-                srlNumber = dto.srlNumber,
+                status = dto.status,
+                assigned = dto.assigned,
+                li_description = dto.li_description,
+                acquired_date = dto.acquired_date,
+                asset_barcode = dto.asset_barcode,
+                serial_no = dto.serial_no,
             };
             _context.Bags.Add(bag);
             await _context.SaveChangesAsync();
@@ -64,10 +68,13 @@ namespace ITAM_DB.Controllers.Peripherals
             // Update the AVR properties            
             bag.color = dto.color;
             bag.brand = dto.brand;
+            bag.status = dto.status;
             bag.type = dto.type;
-            bag.assetCode = dto.assetCode;
-            bag.acqDate = dto.acqDate;
-            bag.srlNumber = dto.srlNumber;
+            bag.assigned = dto.assigned;
+            bag.li_description = dto.li_description;
+            bag.acquired_date = dto.acquired_date;
+            bag.asset_barcode = dto.asset_barcode;
+            bag.serial_no = dto.serial_no;
 
             // Save the changes to the database
             await _context.SaveChangesAsync();
