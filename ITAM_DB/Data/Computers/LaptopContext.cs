@@ -7,20 +7,20 @@ namespace ITAM_DB.Data.Computers
 {
     public class LaptopContext : DbContext
     {
-    //    public LaptopContext(DbContextOptions<LaptopContext> options) : base(options) { }
+        public LaptopContext(DbContextOptions<AVRContext> options) : base(options) { }
 
-    //    public DbSet<Laptop> Laptops { get; set; }
+        public DbSet<Laptop> Laptops { get; set; }
 
-    //    protected override void OnModelCreating(ModelBuilder modelBuilder) // OnModelCreating is the correct method
-    //    {
-    //        // Define `id` as the primary key
-    //        modelBuilder.Entity<Laptop>()
-    //            .HasKey(i => i.id);
+        protected override void OnModelCreating(ModelBuilder modelBuilder) // OnModelCreating is the correct method
+        {
+            // Define `id` as the primary key
+            modelBuilder.Entity<Laptop>()
+                .HasKey(i => i.id);
 
-    //        // Enable auto-increment for the `id` column
-    //        modelBuilder.Entity<Laptop>()
-    //            .Property(i => i.id)
-    //            .ValueGeneratedOnAdd();
-        //}
+            // Enable auto-increment for the `id` column
+            modelBuilder.Entity<Laptop>()
+                .Property(i => i.id)
+                .ValueGeneratedOnAdd();
+        }
     }
 }

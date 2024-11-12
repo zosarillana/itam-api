@@ -2,7 +2,9 @@
 using ITAM_DB.Controllers.Peripherals;
 using ITAM_DB.Data.Peripherals;
 using ITAM_DB.Model.Cards;
+using ITAM_DB.Model.Computers;
 using ITAM_DB.Model.Peripherals;
+using ITAM_DB.Model.Sets;
 using Microsoft.EntityFrameworkCore;
 using PeripheralMonitor = ITAM_DB.Model.Peripherals.Monitor;
 
@@ -26,6 +28,11 @@ namespace ITAM_API.Data
         public DbSet<Mouse> Mouses { get; set; }
         public DbSet<UPS> UPSs { get; set; }
         public DbSet<WebCam> WebCams{ get; set; }
+        public DbSet<Desktop> Desktops { get; set; }
+        public DbSet<DesktopSet> DesktopSets { get; set; }
+        public DbSet<Laptop> Laptops { get; set; }
+        public DbSet<LaptopSet> LaptopSets { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -139,6 +146,38 @@ namespace ITAM_API.Data
 
             modelBuilder.Entity<WebCam>()
                 .Property(w => w.id)
+                .ValueGeneratedOnAdd();
+
+            // WebCamController configuration
+            modelBuilder.Entity<Desktop>()
+                .HasKey(d => d.id);
+
+            modelBuilder.Entity<Desktop>()
+                .Property(d => d.id)
+                .ValueGeneratedOnAdd();
+            
+            // WebCamController configuration
+            modelBuilder.Entity<DesktopSet>()
+                .HasKey(ds => ds.id);
+
+            modelBuilder.Entity<WebCam>()
+                .Property(ds => ds.id)
+                .ValueGeneratedOnAdd();
+            
+            // WebCamController configuration
+            modelBuilder.Entity<Laptop>()
+                .HasKey(l => l.id);
+
+            modelBuilder.Entity<Laptop>()
+                .Property(l => l.id)
+                .ValueGeneratedOnAdd();
+            
+            // WebCamController configuration
+            modelBuilder.Entity<LaptopSet>()
+                .HasKey(ls => ls.id);
+
+            modelBuilder.Entity<WebCam>()
+                .Property(ls => ls.id)
                 .ValueGeneratedOnAdd();
 
             // Additional configuration can be added as needed for each entity.
