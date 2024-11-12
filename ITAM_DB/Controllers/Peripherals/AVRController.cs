@@ -37,9 +37,11 @@ namespace ITAM_DB.Controllers.Peripherals
                 model = dto.model,
                 color = dto.color,
                 brand = dto.brand,
-                status = dto.status,
-                assigned = dto.assigned,
-                li_description = dto.li_description,
+                status = "Active",
+                assigned = "Not Assigned",
+                user_history = "0",
+                set_history = "0",
+                li_description = $"{dto.model} {dto.color}  {dto.brand}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
                 serial_no = dto.serial_no,
@@ -71,6 +73,8 @@ namespace ITAM_DB.Controllers.Peripherals
             avr.brand = dto.brand;
             avr.status = dto.status;
             avr.assigned = dto.assigned;
+            avr.user_history = dto.assigned;
+            avr.set_history = dto.assigned;
             avr.li_description = dto.li_description;
             avr.acquired_date = dto.acquired_date;
             avr.asset_barcode = dto.asset_barcode;
