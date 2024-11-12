@@ -7,7 +7,7 @@ namespace ITAM_DB.Data.Computers
 {
     public class DesktopContext : DbContext
     {
-        public DesktopContext(DbContextOptions<AVRContext> options) : base(options) { }
+        public DesktopContext(DbContextOptions<DesktopContext> options) : base(options) { }
 
         public DbSet<Desktop> Desktops { get; set; }
 

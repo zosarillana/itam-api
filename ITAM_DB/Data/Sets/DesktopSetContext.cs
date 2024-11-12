@@ -7,7 +7,7 @@ namespace ITAM_DB.Data.Sets
 {
     public class DesktopSetContext : DbContext
     {
-        public DesktopSetContext(DbContextOptions<AVRContext> options) : base(options) { }
+        public DesktopSetContext(DbContextOptions<DesktopSetContext> options) : base(options) { }
 
         public DbSet<DesktopSet> DesktopSets { get; set; }
 

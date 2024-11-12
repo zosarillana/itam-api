@@ -1,6 +1,8 @@
 using ITAM_API.Data;
 using ITAM_API.Data.Itot;
+using ITAM_DB.Data.Computers;
 using ITAM_DB.Data.Peripherals;
+using ITAM_DB.Data.Sets;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,6 +47,20 @@ builder.Services.AddDbContext<UPSContext>(options =>
 
 builder.Services.AddDbContext<WebCamContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContext<DesktopContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContext<DesktopSetContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContext<LaptopContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContext<LaptopSetContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
 // Enable Swagger documentation
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

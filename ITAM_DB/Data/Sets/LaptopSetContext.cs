@@ -7,7 +7,7 @@ namespace ITAM_DB.Data.Sets
 {
     public class LaptopSetContext : DbContext
     {
-        public LaptopSetContext(DbContextOptions<AVRContext> options) : base(options) { }
+        public LaptopSetContext(DbContextOptions<LaptopSetContext> options) : base(options) { }
 
         public DbSet<LaptopSet> LaptopSets { get; set; }
 

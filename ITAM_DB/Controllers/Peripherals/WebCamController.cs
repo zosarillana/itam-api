@@ -41,7 +41,7 @@ namespace ITAM_DB.Controllers.Peripherals
                 assigned = "Not Assigned",
                 user_history = "0",
                 set_history = "0",
-                li_description = $"{dto.model} {dto.color} {dto.brand}  {dto.type} {dto.model}",
+                li_description = $"{dto.model} {dto.color} {dto.brand} {dto.type} {dto.model}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
                 serial_no = dto.serial_no,

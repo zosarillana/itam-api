@@ -49,9 +49,11 @@ namespace ITAM_DB.Controllers.Computers
                 operating_system = dto.li_description,
                 graphics = dto.li_description,
                 size = dto.li_description,
-                color = dto.li_description,
-                status = dto.li_description,
-                assigned = dto.li_description,
+                color = dto.li_description,               
+                status = "Active",
+                assigned = "Not Assigned",
+                user_history = "0",
+                li_description = $"{dto.brand} {dto.model} {dto.processor} {dto.ram} {dto.storage_capacity} {dto.storage_type} {dto.operating_system} {dto.graphics} {dto.color}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
                 serial_no = dto.serial_no,
@@ -71,7 +73,7 @@ namespace ITAM_DB.Controllers.Computers
             }
 
             // Find the existing AVR entity by ID
-            var lpt = await _context.AVRs.FindAsync(id);
+            var lpt = await _context.Laptops.FindAsync(id);
             if (lpt == null)
             {
                 return NotFound($"No AVR found with ID {id}.");
