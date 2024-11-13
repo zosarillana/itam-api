@@ -2,6 +2,7 @@
 {
     public class BagDto
     {
+        public int id { get; set; }
         public string color { get; set; } = string.Empty;
         public string brand { get; set; } = string.Empty;
         public string type { get; set; } = string.Empty;

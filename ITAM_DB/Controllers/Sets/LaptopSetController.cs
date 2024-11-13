@@ -5,6 +5,7 @@ using ITAM_DB.Dto.Computers;
 using ITAM_DB.Dto.Peripherals;
 using ITAM_DB.Dto.Sets;
 using ITAM_DB.Model.Computers;
+using ITAM_DB.Model.Peripherals;
 using ITAM_DB.Model.Sets;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,13 +22,6 @@ namespace ITAM_DB.Controllers.Sets
             _context = context;
         }
 
-
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<LaptopSet>>> GetAllLaptop()
-        //{
-        //    var avrs = await _context.LaptopSets.ToListAsync(); // Use your DbSet for AVR
-        //    return Ok(avrs); // Return 200 OK with the list of items
-        //}
         [HttpGet]
         public async Task<ActionResult<List<LaptopDto>>> GetAllDesktopSets()
         {
@@ -200,6 +194,40 @@ namespace ITAM_DB.Controllers.Sets
                             asset_barcode = webcam.asset_barcode,
                             serial_no = webcam.serial_no,
                         }).ToList(),
+
+                    Bags = bags
+                        .Where(bags => bagIds != null && bagIds.Contains(bags.id))
+                        .Select(bags => new BagDto
+                        {
+                            id = bags.id,                            
+                            color = bags.color,
+                            brand = bags.brand,
+                            status = bags.status,
+                            assigned = bags.assigned,
+                            user_history = bags.user_history,
+                            set_history = bags.set_history,
+                            li_description = bags.li_description,
+                            acquired_date = bags.acquired_date,
+                            asset_barcode = bags.asset_barcode,
+                            serial_no = bags.serial_no,
+                        }).ToList(),
+
+                    ExternalDrives = externaldrives
+                        .Where(externaldrives => externaldriveIds != null && externaldriveIds.Contains(externaldrives.id))
+                        .Select(externaldrives => new ExternalDriveDto
+                        {
+                            id = externaldrives.id,
+                            color = externaldrives.color,                            
+                            status = externaldrives.status,
+                            type = externaldrives.type,
+                            user_history = externaldrives.user_history,
+                            set_history = externaldrives.set_history,
+                            li_description = externaldrives.li_description,
+                            acquired_date = externaldrives.acquired_date,
+                            asset_barcode = externaldrives.asset_barcode,
+                            serial_no = externaldrives.serial_no,
+                        }).ToList(),
+
                 };
             }).ToList();
 
