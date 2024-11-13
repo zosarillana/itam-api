@@ -3,7 +3,7 @@
     public class LaptopSet
     {
         public int id { get; set; }
-        public string desktop_id { get; set; }        
+        public string laptop_id { get; set; }        
         public string dongle_id { get; set; }
         public string keyboard_id { get; set; }
         public string lanAdapter_id { get; set; }

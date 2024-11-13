@@ -2,6 +2,7 @@
 {
     public class LaptopDto
     {
+        public int id {  get; set; }
         public string brand { get; set; } = string.Empty;
         public string model { get; set; } = string.Empty;
         public string processor { get; set; } = string.Empty;

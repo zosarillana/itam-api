@@ -234,7 +234,6 @@ namespace ITAM_DB.Controllers.Sets
             return Ok(result);
         }
 
-
         [HttpPost]
         public async Task<ActionResult<List<DesktopSet>>> CreateDesktopSet(DesktopSetDto dto)
         {

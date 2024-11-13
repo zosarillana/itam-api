@@ -5,6 +5,7 @@ using ITAM_DB.Model.Cards;
 using ITAM_DB.Model.Computers;
 using ITAM_DB.Model.Peripherals;
 using ITAM_DB.Model.Sets;
+using ITAM_DB.Model.User;
 using Microsoft.EntityFrameworkCore;
 using PeripheralMonitor = ITAM_DB.Model.Peripherals.Monitor;
 
@@ -32,6 +33,7 @@ namespace ITAM_API.Data
         public DbSet<DesktopSet> DesktopSets { get; set; }
         public DbSet<Laptop> Laptops { get; set; }
         public DbSet<LaptopSet> LaptopSets { get; set; }
+        public DbSet<User> Users { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
