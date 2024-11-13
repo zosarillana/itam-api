@@ -22,13 +22,6 @@ namespace ITAM_DB.Controllers.Sets
             _context = context;
         }
 
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<DesktopSetDto>>> GetAllDesktopSets()
-        //{
-        //    var avrs = await _context.DesktopSets.ToListAsync(); // Use your DbSet for AVR
-        //    return Ok(avrs); // Return 200 OK with the list of items
-        //}
-
         [HttpGet]
         public async Task<ActionResult<List<DesktopDto>>> GetAllDesktopSets()
         {
@@ -44,194 +37,203 @@ namespace ITAM_DB.Controllers.Sets
             var ups = await _context.UPSs.ToListAsync();
             var webcams = await _context.WebCams.ToListAsync();
 
-            var result = desktopsets
-                .Select(ds =>
+            var result = desktopsets.Select(ds =>
+            {
+                // Parse IDs for peripherals
+                var avrIds = ds.avr_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                var dongleIds = ds.dongle_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                var keyboardIds = ds.keyboard_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                var lanIds = ds.lanAdapter_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                var monitorIds = ds.monitor_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                var mouseIds = ds.mouse_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                var upsIds = ds.ups_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                var webcamIds = ds.webcam_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                var desktopIds = ds.desktop_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+
+                return new DesktopSetDto
                 {
-                    // Split the comma-separated pc_ids and peripheral_ids
-                    var avrIds = ds.avr_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
-                    var dongleIds = ds.dongle_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
-                    var keyboardIds = ds.keyboard_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
-                    var lanIds = ds.lanAdapter_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
-                    var monitorIds = ds.monitor_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
-                    var mousesIds = ds.mouse_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
-                    var upsIds = ds.ups_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
-                    var webcamIds = ds.webcam_id?.Split(',').Select(id => int.TryParse(id, out var result) ? result : (int?)null).Where(id => id.HasValue).Select(id => id.Value).ToList();
+                    id = ds.id,
+                    desktop_id = ds.desktop_id,
+                    avr_id = ds.avr_id,
+                    dongle_id = ds.dongle_id,
+                    keyboard_id = ds.keyboard_id,
+                    lanAdapter_id = ds.lanAdapter_id,
+                    monitor_id = ds.monitor_id,
+                    mouse_id = ds.mouse_id,
+                    ups_id = ds.ups_id,
+                    webcam_id = ds.webcam_id,
 
-                    return new DesktopSetDto
-                    {
-                        id = ds.id,
-                        desktop_id = ds.desktop_id,
-                        avr_id = ds.avr_id,
-                        dongle_id = ds.dongle_id,
-                        keyboard_id = ds.keyboard_id,
-                        lanAdapter_id = ds.lanAdapter_id,
-                        monitor_id = ds.monitor_id,
-                        mouse_id = ds.mouse_id,
-                        ups_id = ds.ups_id,
-                        webcam_id = ds.webcam_id,
+                    Desktops = desktops
+                        .Where(desktop => desktopIds != null && desktopIds.Contains(desktop.id))
+                        .Select(desktop => new DesktopDto
+                        {
+                            id = desktop.id,
+                            model = desktop.model,
+                            color = desktop.color,
+                            brand = desktop.brand,
+                            status = desktop.status,
+                            assigned = desktop.assigned,
+                            user_history = desktop.user_history,
+                            li_description = desktop.li_description,
+                            acquired_date = desktop.acquired_date,
+                            asset_barcode = desktop.asset_barcode,
+                            serial_no = desktop.serial_no,
+                        }).ToList(),
 
-                        //List of Peripherals
-                        AVRs = avrs
-                            .Where(avr => avrIds != null && avrIds.Contains(ds.id))
-                            .Select(avr => new AVRDto
-                            {
-                                id = avr.id,
-                                model = avr.model,
-                                color = avr.color,
-                                brand = avr.brand,
-                                status = avr.status,
-                                assigned = avr.assigned,
-                                user_history = avr.user_history,
-                                set_history = avr.set_history,
-                                li_description = avr.li_description,
-                                acquired_date = avr.acquired_date,
-                                asset_barcode = avr.asset_barcode,
-                                serial_no = avr.serial_no,
-                            })
-                            .ToList(),
+                    // List of Peripherals
+                    AVRs = avrs
+                        .Where(avr => avrIds != null && avrIds.Contains(avr.id))
+                        .Select(avr => new AVRDto
+                        {
+                            id = avr.id,
+                            model = avr.model,
+                            color = avr.color,
+                            brand = avr.brand,
+                            status = avr.status,
+                            assigned = avr.assigned,
+                            user_history = avr.user_history,
+                            set_history = avr.set_history,
+                            li_description = avr.li_description,
+                            acquired_date = avr.acquired_date,
+                            asset_barcode = avr.asset_barcode,
+                            serial_no = avr.serial_no,
+                        }).ToList(),
 
-                        Dongles = dongles
-                            .Where(dongles => dongleIds != null && dongleIds.Contains(ds.id))
-                            .Select(dongles => new DongleDto
-                            {
-                                id = dongles.id,
-                                model = dongles.model,
-                                color = dongles.color,
-                                brand = dongles.brand,
-                                type = dongles.type,
-                                status = dongles.status,
-                                assigned = dongles.assigned,
-                                user_history = dongles.user_history,
-                                set_history = dongles.set_history,
-                                li_description = dongles.li_description,
-                                acquired_date = dongles.acquired_date,
-                                asset_barcode = dongles.asset_barcode,
-                                serial_no = dongles.serial_no,
-                            })
-                            .ToList(),
+                    Dongles = dongles
+                        .Where(dongle => dongleIds != null && dongleIds.Contains(dongle.id))
+                        .Select(dongle => new DongleDto
+                        {
+                            id = dongle.id,
+                            model = dongle.model,
+                            color = dongle.color,
+                            brand = dongle.brand,
+                            type = dongle.type,
+                            status = dongle.status,
+                            assigned = dongle.assigned,
+                            user_history = dongle.user_history,
+                            set_history = dongle.set_history,
+                            li_description = dongle.li_description,
+                            acquired_date = dongle.acquired_date,
+                            asset_barcode = dongle.asset_barcode,
+                            serial_no = dongle.serial_no,
+                        }).ToList(),
 
-                        Keyboards = keyboards
-                             .Where(keyboards => keyboardIds != null && keyboardIds.Contains(ds.id))
-                            .Select(keyboards => new KeyboardDto
-                            {
-                                id = keyboards.id,
-                                model = keyboards.model,
-                                color = keyboards.color,
-                                brand = keyboards.brand,
-                                type = keyboards.type,
-                                status = keyboards.status,
-                                assigned = keyboards.assigned,
-                                user_history = keyboards.user_history,
-                                set_history = keyboards.set_history,
-                                li_description = keyboards.li_description,
-                                acquired_date = keyboards.acquired_date,
-                                asset_barcode = keyboards.asset_barcode,
-                                serial_no = keyboards.serial_no,
-                            })
-                            .ToList(),
+                    Keyboards = keyboards
+                        .Where(keyboard => keyboardIds != null && keyboardIds.Contains(keyboard.id))
+                        .Select(keyboard => new KeyboardDto
+                        {
+                            id = keyboard.id,
+                            model = keyboard.model,
+                            color = keyboard.color,
+                            brand = keyboard.brand,
+                            type = keyboard.type,
+                            status = keyboard.status,
+                            assigned = keyboard.assigned,
+                            user_history = keyboard.user_history,
+                            set_history = keyboard.set_history,
+                            li_description = keyboard.li_description,
+                            acquired_date = keyboard.acquired_date,
+                            asset_barcode = keyboard.asset_barcode,
+                            serial_no = keyboard.serial_no,
+                        }).ToList(),
 
-                        LanAdapters = lanadapters
-                             .Where(lanadapters => lanIds != null && lanIds.Contains(ds.id))
-                            .Select(lanadapters => new LanAdapterDto
-                            {
-                                id = lanadapters.id,
-                                model = lanadapters.model,
-                                color = lanadapters.color,
-                                brand = lanadapters.brand,
-                                type = lanadapters.type,
-                                status = lanadapters.status,
-                                assigned = lanadapters.assigned,
-                                user_history = lanadapters.user_history,
-                                set_history = lanadapters.set_history,
-                                li_description = lanadapters.li_description,
-                                acquired_date = lanadapters.acquired_date,
-                                asset_barcode = lanadapters.asset_barcode,
-                                serial_no = lanadapters.serial_no,
-                            })
-                            .ToList(),
+                    LanAdapters = lanadapters
+                        .Where(lan => lanIds != null && lanIds.Contains(lan.id))
+                        .Select(lan => new LanAdapterDto
+                        {
+                            id = lan.id,
+                            model = lan.model,
+                            color = lan.color,
+                            brand = lan.brand,
+                            type = lan.type,
+                            status = lan.status,
+                            assigned = lan.assigned,
+                            user_history = lan.user_history,
+                            set_history = lan.set_history,
+                            li_description = lan.li_description,
+                            acquired_date = lan.acquired_date,
+                            asset_barcode = lan.asset_barcode,
+                            serial_no = lan.serial_no,
+                        }).ToList(),
 
-                        Monitors = monitors
-                             .Where(monitors => monitorIds != null && monitorIds.Contains(ds.id))
-                            .Select(monitors => new MonitorDto
-                            {
-                                id = monitors.id,
-                                model = monitors.model,
-                                color = monitors.color,
-                                brand = monitors.brand,                                
-                                status = monitors.status,
-                                assigned = monitors.assigned,
-                                user_history = monitors.user_history,
-                                set_history = monitors.set_history,
-                                li_description = monitors.li_description,
-                                acquired_date = monitors.acquired_date,
-                                asset_barcode = monitors.asset_barcode,
-                                serial_no = monitors.serial_no,
-                            })
-                            .ToList(),
+                    Monitors = monitors
+                        .Where(monitor => monitorIds != null && monitorIds.Contains(monitor.id))
+                        .Select(monitor => new MonitorDto
+                        {
+                            id = monitor.id,
+                            model = monitor.model,
+                            color = monitor.color,
+                            brand = monitor.brand,
+                            status = monitor.status,
+                            assigned = monitor.assigned,
+                            user_history = monitor.user_history,
+                            set_history = monitor.set_history,
+                            li_description = monitor.li_description,
+                            acquired_date = monitor.acquired_date,
+                            asset_barcode = monitor.asset_barcode,
+                            serial_no = monitor.serial_no,
+                        }).ToList(),
 
-                        Mouses = mouses
-                             .Where(mouses => mousesIds != null && mousesIds.Contains(ds.id))
-                            .Select(mouses => new MouseDto
-                            {
-                                id = mouses.id,
-                                model = mouses.model,
-                                color = mouses.color,
-                                brand = mouses.brand,
-                                status = mouses.status,
-                                type = mouses.type,
-                                assigned = mouses.assigned,
-                                user_history = mouses.user_history,
-                                set_history = mouses.set_history,
-                                li_description = mouses.li_description,
-                                acquired_date = mouses.acquired_date,
-                                asset_barcode = mouses.asset_barcode,
-                                serial_no = mouses.serial_no,
-                            })
-                            .ToList(),
+                    Mouses = mouses
+                        .Where(mouse => mouseIds != null && mouseIds.Contains(mouse.id))
+                        .Select(mouse => new MouseDto
+                        {
+                            id = mouse.id,
+                            model = mouse.model,
+                            color = mouse.color,
+                            brand = mouse.brand,
+                            status = mouse.status,
+                            type = mouse.type,
+                            assigned = mouse.assigned,
+                            user_history = mouse.user_history,
+                            set_history = mouse.set_history,
+                            li_description = mouse.li_description,
+                            acquired_date = mouse.acquired_date,
+                            asset_barcode = mouse.asset_barcode,
+                            serial_no = mouse.serial_no,
+                        }).ToList(),
 
-                        UPSs = ups
-                             .Where(ups => upsIds != null && upsIds.Contains(ds.id))
-                            .Select(ups => new UPSDto
-                            {
-                                id = ups.id,
-                                model = ups.model,
-                                color = ups.color,
-                                brand = ups.brand,
-                                status = ups.status,                                
-                                assigned = ups.assigned,
-                                user_history = ups.user_history,
-                                set_history = ups.set_history,
-                                li_description = ups.li_description,
-                                acquired_date = ups.acquired_date,
-                                asset_barcode = ups.asset_barcode,
-                                serial_no = ups.serial_no,
-                            })
-                            .ToList(),
+                    UPSs = ups
+                        .Where(ups => upsIds != null && upsIds.Contains(ups.id))
+                        .Select(ups => new UPSDto
+                        {
+                            id = ups.id,
+                            model = ups.model,
+                            color = ups.color,
+                            brand = ups.brand,
+                            status = ups.status,
+                            assigned = ups.assigned,
+                            user_history = ups.user_history,
+                            set_history = ups.set_history,
+                            li_description = ups.li_description,
+                            acquired_date = ups.acquired_date,
+                            asset_barcode = ups.asset_barcode,
+                            serial_no = ups.serial_no,
+                        }).ToList(),
 
-                        WebCams = webcams
-                             .Where(webcams => webcamIds != null && webcamIds.Contains(ds.id))
-                            .Select(webcams => new WebCamDto
-                            {
-                                id = webcams.id,
-                                model = webcams.model,
-                                color = webcams.color,
-                                brand = webcams.brand,
-                                status = webcams.status,
-                                assigned = webcams.assigned,
-                                user_history = webcams.user_history,
-                                set_history = webcams.set_history,
-                                li_description = webcams.li_description,
-                                acquired_date = webcams.acquired_date,
-                                asset_barcode = webcams.asset_barcode,
-                                serial_no = webcams.serial_no,
-                            })
-                            .ToList(),
-                    };
-                })
-                .ToList();
+                    WebCams = webcams
+                        .Where(webcam => webcamIds != null && webcamIds.Contains(webcam.id))
+                        .Select(webcam => new WebCamDto
+                        {
+                            id = webcam.id,
+                            model = webcam.model,
+                            color = webcam.color,
+                            brand = webcam.brand,
+                            status = webcam.status,
+                            assigned = webcam.assigned,
+                            user_history = webcam.user_history,
+                            set_history = webcam.set_history,
+                            li_description = webcam.li_description,
+                            acquired_date = webcam.acquired_date,
+                            asset_barcode = webcam.asset_barcode,
+                            serial_no = webcam.serial_no,
+                        }).ToList(),
+                };
+            }).ToList();
 
             return Ok(result);
         }
+
 
         [HttpPost]
         public async Task<ActionResult<List<DesktopSet>>> CreateDesktopSet(DesktopSetDto dto)
