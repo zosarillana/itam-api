@@ -1,6 +1,4 @@
 ﻿using ITAM_API.Model.Operations;
-using ITAM_DB.Controllers.Peripherals;
-using ITAM_DB.Data.Peripherals;
 using ITAM_DB.Model.Cards;
 using ITAM_DB.Model.Computers;
 using ITAM_DB.Model.Peripherals;

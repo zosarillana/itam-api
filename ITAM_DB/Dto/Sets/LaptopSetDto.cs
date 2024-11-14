@@ -1,5 +1,7 @@
 ﻿using ITAM_DB.Dto.Computers;
 using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Model.User;
+using UserModel = ITAM_DB.Model.User.User;
 
 namespace ITAM_DB.Dto.Sets
 {
@@ -15,9 +17,9 @@ namespace ITAM_DB.Dto.Sets
         public string webcam_id { get; set; }
         public string bag_id { get; set; }
         public string externalDrive_id { get; set; } 
-        public string user_id { get; set; }
+        public string user_id { get; set; } = string.Empty;
         public string status { get; set; } = string.Empty;
-        public string assigned { get; set; } = string.Empty;
+        public string assigned { get; set; } 
         public string li_description { get; set; } = string.Empty;
         public string acquired_date { get; set; } = string.Empty;
 
@@ -32,6 +34,7 @@ namespace ITAM_DB.Dto.Sets
         public List<MouseDto> Mouses { get; set; }        
         public List<WebCamDto> WebCams { get; set; }
         public List<BagDto> Bags { get; set; }
-        public List<ExternalDriveDto> ExternalDrives { get; set; }
+        public List<ExternalDriveDto> ExternalDrives { get; set; }  
+        public List<UserModel> Users { get; set; }
     }
 }

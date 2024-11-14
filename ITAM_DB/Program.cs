@@ -3,6 +3,7 @@ using ITAM_API.Data.Itot;
 using ITAM_DB.Data.Computers;
 using ITAM_DB.Data.Peripherals;
 using ITAM_DB.Data.Sets;
+using ITAM_DB.Data.User;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -60,6 +61,8 @@ builder.Services.AddDbContext<LaptopContext>(options =>
 builder.Services.AddDbContext<LaptopSetContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDbContext<UserContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Enable Swagger documentation
 builder.Services.AddEndpointsApiExplorer();
