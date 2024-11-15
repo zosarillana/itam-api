@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\cards\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\cards\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\computers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\computers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\sets\\laptopsetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\sets\\laptopsetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -69,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\controllers\\computers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|solutionrelative:itam_db\\controllers\\computers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84CAE597-A02D-4C52-871C-BC15CBE073AA}|ITAM_DB\\ITAM_DB.csproj|c:\\users\\zcsarillana\\source\\repos\\itam-api\\itam_db\\model\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -178,19 +182,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 282,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CardController.cs",
+              "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Cards\\CardController.cs",
+              "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Cards\\CardController.cs",
+              "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Cards\\CardController.cs",
+              "RelativeToolTip": "ITAM_DB\\Controllers\\Cards\\CardController.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAtwJ4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T00:12:39.782Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AVR.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\AVR.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\AVR.cs",
@@ -198,12 +211,11 @@
               "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\AVR.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T01:33:01.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T01:33:01.815Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Laptop.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Computers\\Laptop.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Computers\\Laptop.cs",
@@ -211,25 +223,23 @@
               "RelativeToolTip": "ITAM_DB\\Model\\Computers\\Laptop.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T01:14:00.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T01:14:00.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LaptopSetController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Sets\\LaptopSetController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Sets\\LaptopSetController.cs",
               "ToolTip": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Sets\\LaptopSetController.cs",
               "RelativeToolTip": "ITAM_DB\\Controllers\\Sets\\LaptopSetController.cs",
-              "ViewState": "AQIAANoBAAAAAAAAAAAcwOQBAAAAAAAA",
+              "ViewState": "AQIAACwBAAAAAAAAAAAcwEcBAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T01:59:45.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T01:59:45.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\User\\UserDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\User\\UserDto.cs",
@@ -241,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "UserContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\User\\UserContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\User\\UserContext.cs",
@@ -253,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "LaptopSetContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Sets\\LaptopSetContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Sets\\LaptopSetContext.cs",
@@ -265,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\User\\User.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\User\\User.cs",
@@ -277,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ItotContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\ItotContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\ItotContext.cs",
@@ -285,12 +295,11 @@
               "RelativeToolTip": "ITAM_DB\\Data\\ItotContext.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAowB8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:40:40.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T03:40:40.333Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "DesktopSetContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Sets\\DesktopSetContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Sets\\DesktopSetContext.cs",
@@ -302,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "LaptopContext.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Data\\Computers\\LaptopContext.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Data\\Computers\\LaptopContext.cs",
@@ -314,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Program.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Program.cs",
@@ -326,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ImportItotController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Itot\\ImportItotController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Itot\\ImportItotController.cs",
@@ -338,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "WebCamController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\WebCamController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\WebCamController.cs",
@@ -350,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "UPSController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\UPSController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\UPSController.cs",
@@ -362,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "MouseController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\MouseController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\MouseController.cs",
@@ -374,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "MonitorController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\MonitorController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\MonitorController.cs",
@@ -386,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "LanAdapterController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\LanAdapterController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\LanAdapterController.cs",
@@ -398,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "KeyboardController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\KeyboardController.cs",
@@ -410,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "ExternalDriveController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\ExternalDriveController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\ExternalDriveController.cs",
@@ -422,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "DongleController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\DongleController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\DongleController.cs",
@@ -434,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "BagController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Peripherals\\BagController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Peripherals\\BagController.cs",
@@ -446,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "WebCamDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\WebCamDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\WebCamDto.cs",
@@ -458,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "UPSDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\UPSDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\UPSDto.cs",
@@ -470,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "MouseDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\MouseDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\MouseDto.cs",
@@ -482,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "MonitorDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\MonitorDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\MonitorDto.cs",
@@ -494,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "LanAdapterDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\LanAdapterDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\LanAdapterDto.cs",
@@ -506,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "KeyboardDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\KeyboardDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\KeyboardDto.cs",
@@ -518,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ExternalDriveDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\ExternalDriveDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\ExternalDriveDto.cs",
@@ -530,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "BagDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Peripherals\\BagDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Peripherals\\BagDto.cs",
@@ -542,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "WebCam.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\WebCam.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\WebCam.cs",
@@ -554,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "UPS.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\UPS.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\UPS.cs",
@@ -566,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "Mouse.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Mouse.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Mouse.cs",
@@ -578,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Monitor.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Monitor.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Monitor.cs",
@@ -590,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "LanAdapter.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\LanAdapter.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\LanAdapter.cs",
@@ -602,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Keyboard.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Keyboard.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Keyboard.cs",
@@ -610,12 +619,11 @@
               "RelativeToolTip": "ITAM_DB\\Model\\Peripherals\\Keyboard.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T03:42:53.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T03:42:53.922Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "ExternalDrive.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\ExternalDrive.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\ExternalDrive.cs",
@@ -627,7 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Bag.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Bag.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Bag.cs",
@@ -639,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Desktop.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Computers\\Desktop.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Computers\\Desktop.cs",
@@ -651,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 1,
               "Title": "LaptopController.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Controllers\\Computers\\LaptopController.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Controllers\\Computers\\LaptopController.cs",
@@ -660,6 +668,10 @@
               "ViewState": "AQIAAEcAAAAAAAAAAAAgwFQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T01:29:33.315Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
@@ -684,7 +696,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "LaptopSetDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Sets\\LaptopSetDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Sets\\LaptopSetDto.cs",
@@ -692,12 +704,11 @@
               "RelativeToolTip": "ITAM_DB\\Dto\\Sets\\LaptopSetDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBMAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T08:28:48.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T08:28:48.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "LaptopDto.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Dto\\Computers\\LaptopDto.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Dto\\Computers\\LaptopDto.cs",
@@ -705,12 +716,11 @@
               "RelativeToolTip": "ITAM_DB\\Dto\\Computers\\LaptopDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T00:18:04.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T00:18:04.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Dongle.cs",
               "DocumentMoniker": "C:\\Users\\zcsarillana\\source\\repos\\itam-api\\ITAM_DB\\Model\\Peripherals\\Dongle.cs",
               "RelativeDocumentMoniker": "ITAM_DB\\Model\\Peripherals\\Dongle.cs",

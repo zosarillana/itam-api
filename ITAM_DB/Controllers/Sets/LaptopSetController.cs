@@ -512,7 +512,7 @@ namespace ITAM_DB.Controllers.Sets
                     await _context.SaveChangesAsync();
                 }
 
-                // Final save after all updates
+                // Final save
                 _context.Laptops.Update(laptop);
                 await _context.SaveChangesAsync();
             }
