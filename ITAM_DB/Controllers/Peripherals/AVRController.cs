@@ -39,9 +39,9 @@ namespace ITAM_DB.Controllers.Peripherals
                 brand = dto.brand,
                 status = "Active",
                 assigned = "Not Assigned",
-                user_history = "0",
-                set_history = "0",
-            li_description = $"{dto.model} {dto.color} {dto.brand}",
+                user_history = "",
+                set_history = "",
+                li_description = $"{dto.model} {dto.color} {dto.brand}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
                 serial_no = dto.serial_no,
@@ -55,10 +55,6 @@ namespace ITAM_DB.Controllers.Peripherals
         [HttpPut("{id}")]
         public async Task<ActionResult<List<AVR>>> UpdateAVR(int id, AVRDto dto)
         {
-            if (dto == null)
-            {
-                return BadRequest("AVR data is required.");
-            }
 
             // Find the existing AVR entity by ID
             var avr = await _context.AVRs.FindAsync(id);

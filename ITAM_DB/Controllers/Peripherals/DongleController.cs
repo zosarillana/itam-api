@@ -26,12 +26,9 @@ namespace ITAM_DB.Controllers.Peripherals
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<Dongle>>> CreateDongle(DongleDto dto)
+        public async Task<ActionResult<List<Dongle>>> CreateDongle(DongleDto     dto)
         {
-            if (dto == null)
-            {
-                return BadRequest("AVR Data is Required,");
-            }
+          
 
             var dongle = new Dongle
             {
@@ -40,8 +37,8 @@ namespace ITAM_DB.Controllers.Peripherals
                 brand = dto.brand,
                 status = "Active",
                 assigned = "Not Assigned",
-                user_history = "0",
-                set_history = "0",
+                user_history = "",
+                set_history = "",
                 li_description = $"{dto.color} {dto.brand} {dto.type}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
@@ -55,11 +52,7 @@ namespace ITAM_DB.Controllers.Peripherals
 
         [HttpPut("{id}")]
         public async Task<ActionResult<List<Dongle>>> UpdateDongle(int id, Dongle dto)
-        {
-            if (dto == null)
-            {
-                return BadRequest("Dongle data is required.");
-            }
+        {          
 
             // Find the existing AVR entity by ID
             var dongle = await _context.Dongles.FindAsync(id);

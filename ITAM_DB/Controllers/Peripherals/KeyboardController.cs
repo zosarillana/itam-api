@@ -27,10 +27,7 @@ namespace ITAM_DB.Controllers.Peripherals
         [HttpPost]
         public async Task<ActionResult<List<Keyboard>>> CreateKeboard(KeyboardDto dto)
         {
-            if (dto == null)
-            {
-                return BadRequest("Keyboard Data is Required,");
-            }
+           
 
             var keyboard = new Keyboard
             {
@@ -40,8 +37,8 @@ namespace ITAM_DB.Controllers.Peripherals
                 type = dto.type,
                 status = "Active",
                 assigned = "Not Assigned",
-                user_history = "0",
-                set_history = "0",
+                user_history = "",
+                set_history = "",
                 li_description = $"{dto.model} {dto.color} {dto.brand} {dto.type}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
@@ -56,10 +53,6 @@ namespace ITAM_DB.Controllers.Peripherals
         [HttpPut("{id}")]
         public async Task<ActionResult<List<Keyboard>>> UpdateKeyboard(int id, KeyboardDto dto)
         {
-            if (dto == null)
-            {
-                return BadRequest("Keyboard data is required.");
-            }
 
             // Find the existing AVR entity by ID
             var keyboard = await _context.Keyboards.FindAsync(id);

@@ -32,11 +32,7 @@ namespace ITAM_DB.Controllers.Computers
 
         [HttpPost]
         public async Task<ActionResult<List<Laptop>>> CreateLaptop(LaptopDto dto)
-        {
-            if (dto == null)
-            {
-                return BadRequest("Laptop Data is Required,");
-            }
+        {           
 
             var lpt = new Laptop
             {
@@ -52,7 +48,7 @@ namespace ITAM_DB.Controllers.Computers
                 color = dto.li_description,               
                 status = "Active",
                 assigned = "Not Assigned",
-                user_history = "0",
+                user_history = "",
                 li_description = $"{dto.brand} {dto.model} {dto.processor} {dto.ram} {dto.storage_capacity} {dto.storage_type} {dto.operating_system} {dto.graphics} {dto.color}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
@@ -66,11 +62,7 @@ namespace ITAM_DB.Controllers.Computers
 
         [HttpPut("{id}")]
         public async Task<ActionResult<List<Laptop>>> UpdateLaptop(int id, LaptopDto dto)
-        {
-            if (dto == null)
-            {
-                return BadRequest("AVR data is required.");
-            }
+        {            
 
             // Find the existing AVR entity by ID
             var lpt = await _context.Laptops.FindAsync(id);

@@ -31,11 +31,7 @@ namespace ITAM_DB.Controllers.Computers
 
         [HttpPost]
         public async Task<ActionResult<List<Desktop>>> CreateDesktop(DesktopDto dto)
-        {
-            if (dto == null)
-            {
-                return BadRequest("Desktop Data is Required,");
-            }
+        {          
 
             var dsktp = new Desktop
             {
@@ -50,7 +46,7 @@ namespace ITAM_DB.Controllers.Computers
             color = dto.color,
             status = "Active",
             assigned = "Not Assigned",
-            user_history = "0",
+            user_history = "",
             li_description = $"{dto.brand} {dto.model} {dto.processor} {dto.ram} {dto.storage_capacity} {dto.storage_type} {dto.operating_system} {dto.graphics} {dto.color}",
             acquired_date = dto.acquired_date,
             asset_barcode = dto.asset_barcode,
@@ -64,11 +60,7 @@ namespace ITAM_DB.Controllers.Computers
 
         [HttpPut("{id}")]
         public async Task<ActionResult<List<Desktop>>> UpdateDesktop(int id, DesktopDto dto)
-        {
-            if (dto == null)
-            {
-                return BadRequest("Desktop data is required.");
-            }
+        {        
 
             // Find the existing AVR entity by ID
             var dsktp = await _context.Desktops.FindAsync(id);

@@ -27,11 +27,7 @@ namespace ITAM_DB.Controllers.Peripherals
 
         [HttpPost]
         public async Task<ActionResult<List<LanAdapter>>> CreateKeyboard(LanAdapterDto dto)
-        {
-            if (dto == null)
-            {
-                return BadRequest("Keyboard Data is Required,");
-            }
+        {          
 
             var lanAdapter = new LanAdapter
             {
@@ -41,8 +37,8 @@ namespace ITAM_DB.Controllers.Peripherals
                 type = dto.type,
                 status = "Active",
                 assigned = "Not Assigned",
-                user_history = "0",
-                set_history = "0",
+                user_history = "",
+                set_history = "",
                 li_description = $"{dto.model} {dto.color} {dto.brand} {dto.type}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
@@ -57,11 +53,7 @@ namespace ITAM_DB.Controllers.Peripherals
         [HttpPut("{id}")]
         public async Task<ActionResult<List<LanAdapter>>> UpdateKeyboard(int id, LanAdapterDto dto)
         {
-            if (dto == null)
-            {
-                return BadRequest("lanAdapter data is required.");
-            }
-
+           
             // Find the existing AVR entity by ID
             var lanAdapter = await _context.LanAdapters.FindAsync(id);
             if (lanAdapter == null)

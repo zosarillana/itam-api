@@ -37,10 +37,11 @@ namespace ITAM_DB.Controllers.Peripherals
                 model = dto.model,
                 color = dto.color,
                 brand = dto.brand,
+                type = dto.type,
                 status = "Active",
                 assigned = "Not Assigned",
-                user_history = "0",
-                set_history = "0",
+                user_history = "",
+                set_history = "",
                 li_description = $"{dto.model} {dto.color} {dto.brand} {dto.type}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
@@ -70,6 +71,7 @@ namespace ITAM_DB.Controllers.Peripherals
             // Update the AVR properties
             mouse.model = dto.model;
             mouse.color = dto.color;
+            mouse.type = dto.type;
             mouse.brand = dto.brand;
             mouse.status = dto.status;
             mouse.li_description = dto.li_description;

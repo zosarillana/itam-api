@@ -65,6 +65,9 @@ namespace ITAM_DB.Controllers.Sets
                     externalDrive_id = ds.externalDrive_id,
                     user_id = ds.user_id,
                     assigned = ds.assigned,
+                    status = ds.status,
+                    acquired_date  = ds.acquired_date,
+                    li_description = ds.li_description,
 
                     Laptops = laptops
                     .Where(laptop => laptopsIds != null && laptopsIds.Contains(laptop.id))
@@ -270,8 +273,9 @@ namespace ITAM_DB.Controllers.Sets
                 bag_id = dto.bag_id,
                 externalDrive_id = dto.externalDrive_id,
                 user_id = dto.user_id,
-                status = dto.status,
-                li_description = dto.li_description,
+                assigned = $"{dto.user_id}",
+                status = "Active",
+                li_description = "N/A",
                 acquired_date = dto.acquired_date,
             };
 
@@ -324,12 +328,19 @@ namespace ITAM_DB.Controllers.Sets
                     setHistory.Add(dto.laptop_id);
                     dongle.set_history = string.Join(", ", setHistory);
 
+                    //var userHistory = dongle.user_history
+                    //    .Split(',')
+                    //    .Select(id => id.Trim())
+                    //    .Where(id => !string.IsNullOrEmpty(id))
+                    //    .ToList();
+                    //if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                    //dongle.user_history = string.Join(", ", userHistory);
                     var userHistory = dongle.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                      .Split(',')
+                      .Select(id => id.Trim())
+                      .Where(id => !string.IsNullOrEmpty(id))
+                      .ToList();
+                    userHistory.Add(dto.user_id);
                     dongle.user_history = string.Join(", ", userHistory);
                     dongle.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
@@ -350,11 +361,11 @@ namespace ITAM_DB.Controllers.Sets
                     keyboard.set_history = string.Join(", ", setHistory);
 
                     var userHistory = keyboard.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                      .Split(',')
+                      .Select(id => id.Trim())
+                      .Where(id => !string.IsNullOrEmpty(id))
+                      .ToList();
+                    userHistory.Add(dto.user_id);
                     keyboard.user_history = string.Join(", ", userHistory);
                     keyboard.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
@@ -375,11 +386,11 @@ namespace ITAM_DB.Controllers.Sets
                     lanadapter.set_history = string.Join(", ", setHistory);
 
                     var userHistory = lanadapter.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                      .Split(',')
+                      .Select(id => id.Trim())
+                      .Where(id => !string.IsNullOrEmpty(id))
+                      .ToList();
+                    userHistory.Add(dto.user_id);
                     lanadapter.user_history = string.Join(", ", userHistory);
                     lanadapter.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
@@ -400,11 +411,11 @@ namespace ITAM_DB.Controllers.Sets
                     monitor.set_history = string.Join(", ", setHistory);
 
                     var userHistory = monitor.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                      .Split(',')
+                      .Select(id => id.Trim())
+                      .Where(id => !string.IsNullOrEmpty(id))
+                      .ToList();
+                    userHistory.Add(dto.user_id);
                     monitor.user_history = string.Join(", ", userHistory);
                     monitor.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
@@ -429,7 +440,7 @@ namespace ITAM_DB.Controllers.Sets
                         .Select(id => id.Trim())
                         .Where(id => !string.IsNullOrEmpty(id))
                         .ToList();
-                    if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                    userHistory.Add(dto.user_id);
                     mouse.user_history = string.Join(", ", userHistory);
                     mouse.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
@@ -450,11 +461,11 @@ namespace ITAM_DB.Controllers.Sets
                     webcam.set_history = string.Join(", ", setHistory);
 
                     var userHistory = webcam.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                         .Split(',')
+                         .Select(id => id.Trim())
+                         .Where(id => !string.IsNullOrEmpty(id))
+                         .ToList();
+                    userHistory.Add(dto.user_id);
                     webcam.user_history = string.Join(", ", userHistory);
                     webcam.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
@@ -475,11 +486,11 @@ namespace ITAM_DB.Controllers.Sets
                     bag.set_history = string.Join(", ", setHistory);
 
                     var userHistory = bag.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                         .Split(',')
+                         .Select(id => id.Trim())
+                         .Where(id => !string.IsNullOrEmpty(id))
+                         .ToList();
+                    userHistory.Add(dto.user_id);
                     bag.user_history = string.Join(", ", userHistory);
                     bag.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
@@ -500,11 +511,11 @@ namespace ITAM_DB.Controllers.Sets
                     externaldrive.set_history = string.Join(", ", setHistory);
 
                     var userHistory = externaldrive.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    if (!userHistory.Contains(dto.user_id)) userHistory.Add(dto.user_id);
+                         .Split(',')
+                         .Select(id => id.Trim())
+                         .Where(id => !string.IsNullOrEmpty(id))
+                         .ToList();
+                    userHistory.Add(dto.user_id);
                     externaldrive.user_history = string.Join(", ", userHistory);
                     externaldrive.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
@@ -550,6 +561,7 @@ namespace ITAM_DB.Controllers.Sets
             set.mouse_id = dto.mouse_id;              
             set.webcam_id = dto.webcam_id;
             set.bag_id = dto.bag_id;
+            set.acquired_date = dto.acquired_date;                       
             set.externalDrive_id = dto.bag_id;
             set.user_id = dto.user_id;
             set.status = dto.status;

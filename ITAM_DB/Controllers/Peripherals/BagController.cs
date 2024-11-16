@@ -39,8 +39,8 @@ namespace ITAM_DB.Controllers.Peripherals
                 type = dto.type,
                 status = "Active",
                 assigned = "Not Assigned",
-                user_history = "0",
-                set_history = "0",
+                user_history = "",
+                set_history = "",
                 li_description = $"{dto.color} {dto.brand} {dto.type}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
@@ -54,25 +54,21 @@ namespace ITAM_DB.Controllers.Peripherals
 
         [HttpPut("{id}")]
         public async Task<ActionResult<List<Bag>>> UpdateBag(int id, BagDto dto)
-        {
-            if (dto == null)
-            {
-                return BadRequest("Bag data is required.");
-            }
-
+        {           
             // Find the existing AVR entity by ID
             var bag = await _context.Bags.FindAsync(id);
             if (bag == null)
             {
                 return NotFound($"No Bag found with ID {id}.");
             }
-
             // Update the AVR properties            
             bag.color = dto.color;
             bag.brand = dto.brand;
             bag.status = dto.status;
             bag.type = dto.type;
             bag.assigned = dto.assigned;
+            bag.user_history = dto.user_history;
+            bag.set_history = dto.set_history;
             bag.li_description = dto.li_description;
             bag.acquired_date = dto.acquired_date;
             bag.asset_barcode = dto.asset_barcode;

@@ -29,10 +29,6 @@ namespace ITAM_DB.Controllers.Peripherals
         [HttpPost]
         public async Task<ActionResult<List<ITAM_DB.Model.Peripherals.Monitor>>> CreateMonitor(MonitorDto dto)
         {
-            if (dto == null)
-            {
-                return BadRequest("Monitor Data is Required.");
-            }
 
             var monitor = new ITAM_DB.Model.Peripherals.Monitor
             {
@@ -42,8 +38,8 @@ namespace ITAM_DB.Controllers.Peripherals
                 brand = dto.brand,
                 status = "Active",
                 assigned = "Not Assigned",
-                user_history = "0",
-                set_history = "0",
+                user_history = "",
+                set_history = "",
                 li_description = $"{dto.model} {dto.color} {dto.brand} {dto.size}",
                 acquired_date = dto.acquired_date,
                 asset_barcode = dto.asset_barcode,
@@ -59,11 +55,7 @@ namespace ITAM_DB.Controllers.Peripherals
 
         [HttpPut("{id}")]
         public async Task<ActionResult<List<ITAM_DB.Model.Peripherals.Monitor>>> UpdateMonitor(int id, MonitorDto dto)
-        {
-            if (dto == null)
-            {
-                return BadRequest("Monitor data is required.");
-            }
+        {           
 
             // Find the existing AVR entity by ID
             var monitor = await _context.Monitors.FindAsync(id);

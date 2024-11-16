@@ -1,5 +1,6 @@
 ﻿using ITAM_DB.Dto.Computers;
 using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Migrations;
 
 namespace ITAM_DB.Dto.Sets
 {
@@ -15,6 +16,7 @@ namespace ITAM_DB.Dto.Sets
         public string mouse_id { get; set; }
         public string ups_id { get; set; }
         public string webcam_id { get; set; }
+        public string assigned {  get; set; }
         public string status { get; set; } = string.Empty;
         public string user_id { get; set; } = string.Empty;
         public string li_description { get; set; } = string.Empty;
