@@ -1,5 +1,5 @@
 ﻿using ITAM_DB.Data.Peripherals;
-using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Dto.Peripherals.Dongle;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,8 +27,7 @@ namespace ITAM_DB.Controllers.Peripherals
 
         [HttpPost]
         public async Task<ActionResult<List<Dongle>>> CreateDongle(DongleDto     dto)
-        {
-          
+        {          
 
             var dongle = new Dongle
             {
@@ -36,7 +35,7 @@ namespace ITAM_DB.Controllers.Peripherals
                 color = dto.color,
                 brand = dto.brand,
                 status = "Active",
-                assigned = "Not Assigned",
+                assigned = "",
                 user_history = "",
                 set_history = "",
                 li_description = $"{dto.color} {dto.brand} {dto.type}",

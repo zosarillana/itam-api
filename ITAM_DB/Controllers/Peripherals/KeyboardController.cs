@@ -1,5 +1,5 @@
 ﻿using ITAM_DB.Data.Peripherals;
-using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Dto.Peripherals.Keyboard;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -36,7 +36,7 @@ namespace ITAM_DB.Controllers.Peripherals
                 brand = dto.brand,
                 type = dto.type,
                 status = "Active",
-                assigned = "Not Assigned",
+                assigned = "",
                 user_history = "",
                 set_history = "",
                 li_description = $"{dto.model} {dto.color} {dto.brand} {dto.type}",

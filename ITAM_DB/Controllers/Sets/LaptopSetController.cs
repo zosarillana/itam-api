@@ -1,6 +1,13 @@
 ﻿using ITAM_API.Data;
 using ITAM_DB.Dto.Computers;
 using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Dto.Peripherals.Bag;
+using ITAM_DB.Dto.Peripherals.Dongle;
+using ITAM_DB.Dto.Peripherals.ExternalDrive;
+using ITAM_DB.Dto.Peripherals.Keyboard;
+using ITAM_DB.Dto.Peripherals.LanAdapterDto;
+using ITAM_DB.Dto.Peripherals.Monitor;
+using ITAM_DB.Dto.Peripherals.Mouse;
 using ITAM_DB.Dto.Sets;
 using ITAM_DB.Dto.User;
 using ITAM_DB.Model.Sets;
@@ -29,7 +36,7 @@ namespace ITAM_DB.Controllers.Sets
             var laptops = await _context.Laptops.ToListAsync();            
             var dongles = await _context.Dongles.ToListAsync();
             var keyboards = await _context.Keyboards.ToListAsync();
-            var lanadapters = await _context.LanAdapters.ToListAsync();
+            var lanadapters = await _context.LanAdapters.ToListAsync();            
             var monitors = await _context.Monitors.ToListAsync();
             var mouses = await _context.Mouses.ToListAsync();           
             var webcams = await _context.WebCams.ToListAsync();

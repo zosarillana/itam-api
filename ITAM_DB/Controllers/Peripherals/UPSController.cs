@@ -1,5 +1,5 @@
 ﻿using ITAM_DB.Data.Peripherals;
-using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Dto.Peripherals.USP;
 using ITAM_DB.Model.Peripherals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -38,7 +38,7 @@ namespace ITAM_DB.Controllers.Peripherals
                 color = dto.color,
                 brand = dto.brand,
                 status = "Active",
-                assigned = "Not Assigned",
+                assigned = "",
                 user_history = "",
                 set_history = "",
                 li_description = $"{dto.model} {dto.color} {dto.brand} {dto.model}",
@@ -73,6 +73,8 @@ namespace ITAM_DB.Controllers.Peripherals
             ups.brand = dto.brand;
             ups.status = dto.status;
             ups.assigned = dto.assigned;
+            ups.set_history = dto.set_history;
+            ups.user_history = dto.user_history;
             ups.li_description = dto.li_description;
             ups.acquired_date = dto.acquired_date;
             ups.asset_barcode = dto.asset_barcode;

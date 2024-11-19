@@ -1,5 +1,12 @@
-﻿using ITAM_DB.Dto.Computers;
+﻿using ITAM_DB.Dto.Computers.Desktop;
 using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Dto.Peripherals.AVR;
+using ITAM_DB.Dto.Peripherals.Dongle;
+using ITAM_DB.Dto.Peripherals.Keyboard;
+using ITAM_DB.Dto.Peripherals.LanAdapterDto;
+using ITAM_DB.Dto.Peripherals.Monitor;
+using ITAM_DB.Dto.Peripherals.Mouse;
+using ITAM_DB.Dto.Peripherals.USP;
 using ITAM_DB.Migrations;
 
 namespace ITAM_DB.Dto.Sets

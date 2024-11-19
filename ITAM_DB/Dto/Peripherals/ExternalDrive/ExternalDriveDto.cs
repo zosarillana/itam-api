@@ -1,11 +1,12 @@
-﻿namespace ITAM_DB.Dto.Peripherals
+﻿namespace ITAM_DB.Dto.Peripherals.ExternalDrive
 {
-    public class UPSDto
+    public class ExternalDriveDto
     {
-        public int id { get; set; } 
+        public int id { get; set; }
         public string model { get; set; } = string.Empty;
         public string color { get; set; } = string.Empty;
         public string brand { get; set; } = string.Empty;
+        public string type { get; set; } = string.Empty;
         public string status { get; set; } = string.Empty;
         public string assigned { get; set; } = string.Empty;
         public string? user_history { get; set; } = string.Empty;

@@ -2,14 +2,22 @@
 using ITAM_DB.Data.Computers;
 using ITAM_DB.Data.Peripherals;
 using ITAM_DB.Data.Sets;
-using ITAM_DB.Dto.Computers;
+using ITAM_DB.Dto.Computers.Desktop;
 using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Dto.Peripherals.AVR;
+using ITAM_DB.Dto.Peripherals.Dongle;
+using ITAM_DB.Dto.Peripherals.Keyboard;
+using ITAM_DB.Dto.Peripherals.LanAdapterDto;
+using ITAM_DB.Dto.Peripherals.Monitor;
+using ITAM_DB.Dto.Peripherals.Mouse;
+using ITAM_DB.Dto.Peripherals.USP;
 using ITAM_DB.Dto.Sets;
 using ITAM_DB.Model.Computers;
 using ITAM_DB.Model.Peripherals;
 using ITAM_DB.Model.Sets;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 using System.Threading;
 
 namespace ITAM_DB.Controllers.Sets
@@ -240,283 +248,225 @@ namespace ITAM_DB.Controllers.Sets
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<DesktopSet>>> CreateLaptop(DesktopSetDto dto)
+        public async Task<ActionResult<List<DesktopSet>>> CreateDesktop(DesktopSetDto dto)
         {
             if (dto == null)
             {
-                return BadRequest("LaptopSet Data is Required.");
+                return BadRequest("DesktopSet Data is Required.");
             }
-
-
-            // Create a new LaptopSet object based on the provided dto
-            var set = new DesktopSet
-            {
-                desktop_id = dto.desktop_id,
-                avr_id = dto.avr_id,
-                dongle_id = dto.dongle_id,
-                keyboard_id = dto.keyboard_id,
-                lanAdapter_id = dto.lanAdapter_id,
-                monitor_id = dto.monitor_id,
-                mouse_id = dto.mouse_id,
-                webcam_id = dto.webcam_id,
-                user_id = dto.user_id,
-                assigned = $"{dto.user_id}",
-                status = "Active",
-                li_description = "N/A",
-                acquired_date = dto.acquired_date,
-            };
 
             try
             {
-                // Add and save to generate ID
+                // Create a new DesktopSet object based on the provided dto
+                var set = new DesktopSet
+                {
+                    desktop_id = dto.desktop_id ?? "",
+                    avr_id = dto.avr_id ?? "",
+                    dongle_id = dto.dongle_id ?? "",
+                    keyboard_id = dto.keyboard_id ?? "",
+                    lanAdapter_id = dto.lanAdapter_id ?? "",
+                    monitor_id = dto.monitor_id ?? "",
+                    mouse_id = dto.mouse_id ?? "",
+                    ups_id = dto.ups_id ?? "",
+                    webcam_id = dto.webcam_id ?? "",
+                    user_id = dto.user_id ?? "",
+                    assigned = $"{dto.user_id}",
+                    status = "Active",
+                    li_description = "N/A",
+                    acquired_date = dto.acquired_date ?? DateTime.UtcNow.ToString(),
+                };
+
+                // Add the new set first
                 _context.DesktopSets.Add(set);
                 await _context.SaveChangesAsync();
 
-                // Parse IDs according to their actual type (assuming integers)
-                int desktopId = int.Parse(dto.desktop_id);
-                int avrId = int.Parse(dto.avr_id);
-                int dongleId = int.Parse(dto.dongle_id);
-                int keyboardId = int.Parse(dto.keyboard_id);
-                int lanAdapterId = int.Parse(dto.lanAdapter_id);
-                int monitorId = int.Parse(dto.monitor_id);
-                int mouseId = int.Parse(dto.mouse_id);
-                int webcamId = int.Parse(dto.webcam_id);
-                int upsId = int.Parse(dto.ups_id);
-
-
-
-                // Desktop update
-                var desktop = await _context.Desktops.FirstOrDefaultAsync(de => de.id == desktopId);
-                if (desktop == null) return NotFound("Laptop with the specified laptop_id not found.");
-
-                if (!string.IsNullOrEmpty(dto.user_id))
-                {
-                    var userIds = desktop.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => id != "0" && !string.IsNullOrEmpty(id))
-                        .ToList();
-
-                    if (!userIds.Contains(dto.user_id)) userIds.Add(dto.user_id);
-                    desktop.user_history = string.Join(", ", userIds);
-                }
-           
-                desktop.assigned = set.id.ToString();
                 var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
-                desktop.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
+                var currentTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
 
-                //AVR update
-                var avr = await _context.AVRs.FirstOrDefaultAsync(a => a.id == avrId);
-                if (avr != null)
+                // Helper function to safely parse ID
+                int SafeParseId(string id) => !string.IsNullOrEmpty(id) ? int.Parse(id) : 0;
+
+                // Helper function to update history
+                //string UpdateHistory(string currentHistory, string newId)
+                //{
+                //    if (string.IsNullOrEmpty(currentHistory)) return newId;
+                //    var history = currentHistory.Split(',')
+                //        .Select(id => id.Trim())
+                //        .Where(id => !string.IsNullOrEmpty(id))
+                //        .ToList();
+                //    if (!history.Contains(newId)) history.Add(newId);
+                //    return string.Join(", ", history);
+                //}
+
+                // Helper function to update history - modified to allow repeated values
+                string UpdateHistory(string currentHistory, string newId)
                 {
-                    var setHistory = avr.set_history
-                        .Split(',')
+                    if (string.IsNullOrEmpty(currentHistory)) return newId;
+
+                    var history = currentHistory.Split(',')
                         .Select(id => id.Trim())
                         .Where(id => !string.IsNullOrEmpty(id))
                         .ToList();
-                    setHistory.Add(dto.desktop_id);
-                    avr.set_history = string.Join(", ", setHistory);
 
-                    var userHistory = avr.user_history
-                      .Split(',')
-                      .Select(id => id.Trim())
-                      .Where(id => !string.IsNullOrEmpty(id))
-                      .ToList();
-                    userHistory.Add(dto.user_id);
-                    avr.user_history = string.Join(", ", userHistory);
-                    avr.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
+                    // Always add the new ID, even if it already exists
+                    history.Add(newId);
 
-                    _context.AVRs.Update(avr);
-                    await _context.SaveChangesAsync();
+                    return string.Join(", ", history);
+                }
+
+                // Desktop update
+                if (!string.IsNullOrEmpty(dto.desktop_id))
+                {
+                    var desktopId = SafeParseId(dto.desktop_id);
+                    var desktop = await _context.Desktops.FirstOrDefaultAsync(d => d.id == desktopId);
+                    if (desktop != null)
+                    {
+                        desktop.user_history = UpdateHistory(desktop.user_history, dto.user_id);
+                        //desktop.user_history = UpdateHistory(desktop.user_history, dto.user_id);
+                        desktop.assigned = set.id.ToString();
+                        desktop.date_updated = currentTime;
+                        _context.Desktops.Update(desktop);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
+                // AVR update
+                if (!string.IsNullOrEmpty(dto.avr_id))
+                {
+                    var avrId = SafeParseId(dto.avr_id);
+                    var avr = await _context.AVRs.FirstOrDefaultAsync(a => a.id == avrId);
+                    if (avr != null)
+                    {
+                        avr.set_history = UpdateHistory(avr.set_history, dto.desktop_id);
+                        avr.user_history = UpdateHistory(avr.user_history, dto.user_id);
+                        avr.date_updated = currentTime;
+                        _context.AVRs.Update(avr);
+                        await _context.SaveChangesAsync();
+                    }
                 }
 
                 // Dongle update
-                var dongle = await _context.Dongles.FirstOrDefaultAsync(d => d.id == dongleId);
-                if (dongle != null)
+                if (!string.IsNullOrEmpty(dto.dongle_id))
                 {
-                    var setHistory = dongle.set_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    setHistory.Add(dto.desktop_id);
-                    dongle.set_history = string.Join(", ", setHistory);
-               
-                    var userHistory = dongle.user_history
-                      .Split(',')
-                      .Select(id => id.Trim())
-                      .Where(id => !string.IsNullOrEmpty(id))
-                      .ToList();
-                    userHistory.Add(dto.user_id);
-                    dongle.user_history = string.Join(", ", userHistory);
-                    dongle.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-
-                    _context.Dongles.Update(dongle);
-                    await _context.SaveChangesAsync();
+                    var dongleId = SafeParseId(dto.dongle_id);
+                    var dongle = await _context.Dongles.FirstOrDefaultAsync(d => d.id == dongleId);
+                    if (dongle != null)
+                    {
+                        dongle.set_history = UpdateHistory(dongle.set_history, dto.desktop_id);
+                        dongle.user_history = UpdateHistory(dongle.user_history, dto.user_id);
+                        dongle.date_updated = currentTime;
+                        _context.Dongles.Update(dongle);
+                        await _context.SaveChangesAsync();
+                    }
                 }
 
                 // Keyboard update
-                var keyboard = await _context.Keyboards.FirstOrDefaultAsync(k => k.id == keyboardId);
-                if (keyboard != null)
+                if (!string.IsNullOrEmpty(dto.keyboard_id))
                 {
-                    var setHistory = keyboard.set_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    setHistory.Add(dto.desktop_id);
-                    keyboard.set_history = string.Join(", ", setHistory);
-
-                    var userHistory = keyboard.user_history
-                      .Split(',')
-                      .Select(id => id.Trim())
-                      .Where(id => !string.IsNullOrEmpty(id))
-                      .ToList();
-                    userHistory.Add(dto.user_id);
-                    keyboard.user_history = string.Join(", ", userHistory);
-                    keyboard.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-
-                    _context.Keyboards.Update(keyboard);
-                    await _context.SaveChangesAsync();
+                    var keyboardId = SafeParseId(dto.keyboard_id);
+                    var keyboard = await _context.Keyboards.FirstOrDefaultAsync(k => k.id == keyboardId);
+                    if (keyboard != null)
+                    {
+                        keyboard.set_history = UpdateHistory(keyboard.set_history, dto.desktop_id);
+                        keyboard.user_history = UpdateHistory(keyboard.user_history, dto.user_id);
+                        keyboard.date_updated = currentTime;
+                        _context.Keyboards.Update(keyboard);
+                        await _context.SaveChangesAsync();
+                    }
                 }
 
-                // Lan Adapter update
-                var lanadapter = await _context.LanAdapters.FirstOrDefaultAsync(l => l.id == lanAdapterId);
-                if (lanadapter != null)
+                // LAN Adapter update
+                if (!string.IsNullOrEmpty(dto.lanAdapter_id))
                 {
-                    var setHistory = lanadapter.set_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    setHistory.Add(dto.desktop_id);
-                    lanadapter.set_history = string.Join(", ", setHistory);
-
-                    var userHistory = lanadapter.user_history
-                      .Split(',')
-                      .Select(id => id.Trim())
-                      .Where(id => !string.IsNullOrEmpty(id))
-                      .ToList();
-                    userHistory.Add(dto.user_id);
-                    lanadapter.user_history = string.Join(", ", userHistory);
-                    lanadapter.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-
-                    _context.LanAdapters.Update(lanadapter);
-                    await _context.SaveChangesAsync();
+                    var lanAdapterId = SafeParseId(dto.lanAdapter_id);
+                    var lanAdapter = await _context.LanAdapters.FirstOrDefaultAsync(l => l.id == lanAdapterId);
+                    if (lanAdapter != null)
+                    {
+                        lanAdapter.set_history = UpdateHistory(lanAdapter.set_history, dto.desktop_id);
+                        lanAdapter.user_history = UpdateHistory(lanAdapter.user_history, dto.user_id);
+                        lanAdapter.date_updated = currentTime;
+                        _context.LanAdapters.Update(lanAdapter);
+                        await _context.SaveChangesAsync();
+                    }
                 }
 
                 // Monitor update
-                var monitor = await _context.Monitors.FirstOrDefaultAsync(m => m.id == monitorId);
-                if (monitor != null)
+                if (!string.IsNullOrEmpty(dto.monitor_id))
                 {
-                    var setHistory = monitor.set_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    setHistory.Add(dto.desktop_id);
-                    monitor.set_history = string.Join(", ", setHistory);
-
-                    var userHistory = monitor.user_history
-                      .Split(',')
-                      .Select(id => id.Trim())
-                      .Where(id => !string.IsNullOrEmpty(id))
-                      .ToList();
-                    userHistory.Add(dto.user_id);
-                    monitor.user_history = string.Join(", ", userHistory);
-                    monitor.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-
-                    _context.Monitors.Update(monitor);
-                    await _context.SaveChangesAsync();
+                    var monitorId = SafeParseId(dto.monitor_id);
+                    var monitor = await _context.Monitors.FirstOrDefaultAsync(m => m.id == monitorId);
+                    if (monitor != null)
+                    {
+                        monitor.set_history = UpdateHistory(monitor.set_history, dto.desktop_id);
+                        monitor.user_history = UpdateHistory(monitor.user_history, dto.user_id);
+                        monitor.date_updated = currentTime;
+                        _context.Monitors.Update(monitor);
+                        await _context.SaveChangesAsync();
+                    }
                 }
 
                 // Mouse update
-                var mouse = await _context.Mouses.FirstOrDefaultAsync(m => m.id == mouseId);
-                if (mouse != null)
+                if (!string.IsNullOrEmpty(dto.mouse_id))
                 {
-                    var setHistory = mouse.set_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    setHistory.Add(dto.desktop_id);
-                    mouse.set_history = string.Join(", ", setHistory);
-
-                    var userHistory = mouse.user_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    userHistory.Add(dto.user_id);
-                    mouse.user_history = string.Join(", ", userHistory);
-                    mouse.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-
-                    _context.Mouses.Update(mouse);
-                    await _context.SaveChangesAsync();
-                }
-
-                // WebCam update
-                var webcam = await _context.WebCams.FirstOrDefaultAsync(w => w.id == webcamId);
-                if (webcam != null)
-                {
-                    var setHistory = webcam.set_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    setHistory.Add(dto.desktop_id);
-                    webcam.set_history = string.Join(", ", setHistory);
-
-                    var userHistory = webcam.user_history
-                         .Split(',')
-                         .Select(id => id.Trim())
-                         .Where(id => !string.IsNullOrEmpty(id))
-                         .ToList();
-                    userHistory.Add(dto.user_id);
-                    webcam.user_history = string.Join(", ", userHistory);
-                    webcam.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-
-                    _context.WebCams.Update(webcam);
-                    await _context.SaveChangesAsync();
+                    var mouseId = SafeParseId(dto.mouse_id);
+                    var mouse = await _context.Mouses.FirstOrDefaultAsync(m => m.id == mouseId);
+                    if (mouse != null)
+                    {
+                        mouse.set_history = UpdateHistory(mouse.set_history, dto.desktop_id);
+                        mouse.user_history = UpdateHistory(mouse.user_history, dto.user_id);
+                        mouse.date_updated = currentTime;
+                        _context.Mouses.Update(mouse);
+                        await _context.SaveChangesAsync();
+                    }
                 }
 
                 // UPS update
-                var ups = await _context.Bags.FirstOrDefaultAsync(u => u.id == upsId);
-                if (ups != null)
+                if (!string.IsNullOrEmpty(dto.ups_id))
                 {
-                    var setHistory = ups.set_history
-                        .Split(',')
-                        .Select(id => id.Trim())
-                        .Where(id => !string.IsNullOrEmpty(id))
-                        .ToList();
-                    setHistory.Add(dto.desktop_id);
-                    ups.set_history = string.Join(", ", setHistory);
-
-                    var userHistory = ups.user_history
-                         .Split(',')
-                         .Select(id => id.Trim())
-                         .Where(id => !string.IsNullOrEmpty(id))
-                         .ToList();
-                    userHistory.Add(dto.user_id);
-                    ups.user_history = string.Join(", ", userHistory);
-                    ups.date_updated = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, phTimeZone);
-
-                    _context.Bags.Update(ups);
-                    await _context.SaveChangesAsync();
+                    var upsId = SafeParseId(dto.ups_id);
+                    var ups = await _context.UPSs.FirstOrDefaultAsync(u => u.id == upsId);
+                    if (ups != null)
+                    {
+                        ups.set_history = UpdateHistory(ups.set_history, dto.desktop_id);
+                        ups.user_history = UpdateHistory(ups.user_history, dto.user_id);
+                        ups.date_updated = currentTime;
+                        _context.UPSs.Update(ups);
+                        await _context.SaveChangesAsync();
+                    }
                 }
-            
+
+                // WebCam update
+                if (!string.IsNullOrEmpty(dto.webcam_id))
+                {
+                    var webcamId = SafeParseId(dto.webcam_id);
+                    var webcam = await _context.WebCams.FirstOrDefaultAsync(w => w.id == webcamId);
+                    if (webcam != null)
+                    {
+                        webcam.set_history = UpdateHistory(webcam.set_history, dto.desktop_id);
+                        webcam.user_history = UpdateHistory(webcam.user_history, dto.user_id);
+                        webcam.date_updated = currentTime;
+                        _context.WebCams.Update(webcam);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
+                return Ok(await _context.DesktopSets.ToListAsync());
+            }
+            catch (DbUpdateException ex)
+            {
+                var innerException = ex.InnerException;
+                Console.Error.WriteLine($"Database Update Error: {ex.Message}");
+                Console.Error.WriteLine($"Inner Exception: {innerException?.Message}");
+                Console.Error.WriteLine($"Stack Trace: {ex.StackTrace}");
+                return StatusCode(500, $"Database error: {innerException?.Message ?? ex.Message}");
             }
             catch (Exception ex)
             {
                 Console.Error.WriteLine($"Error occurred: {ex.Message}");
-                if (ex.InnerException != null)
-                {
-                    Console.Error.WriteLine($"Inner exception: {ex.InnerException.Message}");
-                }
+                Console.Error.WriteLine($"Inner Exception: {ex.InnerException?.Message}");
+                Console.Error.WriteLine($"Stack Trace: {ex.StackTrace}");
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
-
-            return Ok(await _context.LaptopSets.ToListAsync());
         }
 
         [HttpPut("{id}")]

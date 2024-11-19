@@ -33,7 +33,7 @@ namespace ITAM_DB.Controllers.Peripherals
                 brand = dto.brand,
                 type = dto.type,
                 status = "Active",
-                assigned = "Not Assigned",
+                assigned = "",
                 user_history = "",
                 set_history = "",
                 li_description = $"{dto.model} {dto.color} {dto.brand} {dto.type} {dto.model}",
@@ -71,6 +71,8 @@ namespace ITAM_DB.Controllers.Peripherals
             webcs.brand = dto.brand;
             webcs.status = dto.status;
             webcs.assigned = dto.assigned;
+            webcs.user_history = dto.user_history; 
+            webcs.set_history   = dto.set_history;
             webcs.li_description = dto.li_description;
             webcs.acquired_date = dto.acquired_date;
             webcs.asset_barcode = dto.asset_barcode;

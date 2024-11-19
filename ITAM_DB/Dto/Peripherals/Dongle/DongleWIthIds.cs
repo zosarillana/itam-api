@@ -1,8 +1,12 @@
-﻿namespace ITAM_DB.Dto.Peripherals
+﻿using ITAM_DB.Dto.Computers.Desktop;
+using ITAM_DB.Dto.User;
+using System.Text.Json.Serialization;
+
+namespace ITAM_DB.Dto.Peripherals.Dongle
 {
-    public class MouseDto
+    public class DongleWIthIds
     {
-        public int id {  get; set; }
+        public int id { get; set; }
         public string model { get; set; } = string.Empty;
         public string color { get; set; } = string.Empty;
         public string brand { get; set; } = string.Empty;
@@ -15,5 +19,18 @@
         public string acquired_date { get; set; } = string.Empty;
         public string asset_barcode { get; set; } = string.Empty;
         public string serial_no { get; set; } = string.Empty;
+        public DateTime date_created { get; set; }
+        public DateTime date_updated { get; set; }
+
+        // Relationships with other entities
+        [JsonPropertyName("assignedUsers")] // Ensure distinct JSON property name
+        public List<UserDto> Assigned { get; set; } // Renamed in JSON to "assignedUsers"
+
+        [JsonPropertyName("userHistory")]
+        public List<UserDto> UserHistory { get; set; }
+
+        [JsonPropertyName("setHistory")]
+        public List<DesktopDto> SetHistory { get; set; }
+
     }
 }

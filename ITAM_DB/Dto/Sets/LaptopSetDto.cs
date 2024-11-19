@@ -1,5 +1,12 @@
 ﻿using ITAM_DB.Dto.Computers;
 using ITAM_DB.Dto.Peripherals;
+using ITAM_DB.Dto.Peripherals.Bag;
+using ITAM_DB.Dto.Peripherals.Dongle;
+using ITAM_DB.Dto.Peripherals.ExternalDrive;
+using ITAM_DB.Dto.Peripherals.Keyboard;
+using ITAM_DB.Dto.Peripherals.LanAdapterDto;
+using ITAM_DB.Dto.Peripherals.Monitor;
+using ITAM_DB.Dto.Peripherals.Mouse;
 using ITAM_DB.Model.User;
 using UserModel = ITAM_DB.Model.User.User;
 
